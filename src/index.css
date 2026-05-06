@@ -288,9 +288,9 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   max-width: 680px;
   margin: 0 auto 48px;
 }
-.serve-header h2 { white-space: nowrap; }
+.serve-header h2 { white-space: normal; }
 .serve-header h2 .accent { display: block; white-space: normal; background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.serve-header .section-intro { margin: 0 auto; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.serve-header .section-intro { margin: 0 auto; }
 .serve-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1741,7 +1741,9 @@ footer { background: var(--dark); color: white; padding: 4rem 2rem 2rem; positio
 .footer-brand p { font-size: 0.875rem; color: rgba(255,255,255,0.55); margin-top: 0.75rem; line-height: 1.7; max-width: 300px; }
 .footer-col h4 { font-size: 0.875rem; font-weight: 700; margin-bottom: 1rem; color: rgba(255,255,255,0.9); }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-.footer-col ul a { font-size: 0.85rem; color: rgba(255,255,255,0.5); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+.footer-col ul a,
+.footer-col ul .footer-placeholder-link { font-size: 0.85rem; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+.footer-col ul a { cursor: pointer; }
 .footer-col ul a:hover { color: var(--purple-light); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
@@ -2012,4 +2014,40 @@ body.large-text h2 { font-size: clamp(2.1rem, 4vw, 3.2rem); }
   .ct-types-inner { grid-template-columns: 1fr; }
   .ct-form-row { grid-template-columns: 1fr; }
   .ct-submit { width: 100%; text-align: center; }
+}
+
+/* ─── ADDITIONAL MOBILE FIXES ─── */
+
+/* Markets hero: 12rem left padding collapses text on mobile */
+@media (max-width: 900px) {
+  .hero-markets {
+    padding: 5rem 1.5rem 4rem;
+    min-height: auto;
+  }
+  .markets-hero-imgs { display: none; }
+}
+
+/* Impact hero: 6rem side padding is too wide on mobile */
+@media (max-width: 768px) {
+  .nos-hero {
+    padding: 5rem 1.5rem 3rem;
+    min-height: auto;
+  }
+  .nos-hero-inner { flex-direction: column; gap: 2rem; }
+  .nos-hero-img-wrap { flex: none; width: 100%; max-width: 340px; margin: 0 auto; }
+
+  /* Mission section: 2-col grid → single column */
+  .nos-mission-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .nos-mission-left { border-right: none; border-bottom: 1px solid rgba(197,149,252,0.15); padding-right: 0; padding-bottom: 2rem; }
+
+  /* Origin story: 2-col grid → single column */
+  .nos-origin-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .nos-origin-visual { min-height: auto; }
+  .nos-origin-float { display: none; }
+
+  /* Chatbot section: 3-col grid → single column */
+  .chatbot-grid { grid-template-columns: 1fr; }
+
+  /* Values grid: keep 2-col but reduce padding */
+  .nos-value-card { padding: 1.75rem 1.5rem; }
 }

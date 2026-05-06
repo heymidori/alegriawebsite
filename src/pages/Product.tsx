@@ -28,6 +28,7 @@ export default function Product() {
               </h1>
               <p className="hp-sub">{t.heroSub}</p>
               <div className="hp-cta">
+                {/* TODO: add onClick navigation — decide destination (e.g. /contacto) */}
                 <button className="hp-btn-primary">{t.heroCtaPrimary}</button>
                 <button className="hp-btn-secondary">{t.heroCtaSecondary}</button>
               </div>

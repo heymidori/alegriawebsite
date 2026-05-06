@@ -118,7 +118,7 @@ export default function Markets() {
               )
             ])}
           </div>
-          <p className="comm-closing"> — implemented in under 30 minutes per resident</p>
+          <p className="comm-closing">{t.communityClosing}</p>
         </div>
       </section>
 

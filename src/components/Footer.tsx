@@ -1,10 +1,9 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AlegriaLogo from './AlegriaLogo';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 
 export default function Footer() {
-  const navigate = useNavigate();
   const { lang } = useLang();
   const t = translations[lang].footer;
   const navLinks = translations[lang].nav.links;
@@ -33,14 +32,7 @@ export default function Footer() {
             <ul role="list">
               {navLinks.map(({ to, label }) => (
                 <li key={to}>
-                  <a
-                    role="link"
-                    tabIndex={0}
-                    onClick={() => { navigate(to); window.scrollTo({ top: 0 }); }}
-                    onKeyDown={(e) => e.key === 'Enter' && navigate(to)}
-                  >
-                    {label}
-                  </a>
+                  <Link to={to}>{label}</Link>
                 </li>
               ))}
             </ul>
@@ -50,9 +42,10 @@ export default function Footer() {
             <h4>{t.contactLabel}</h4>
             <ul role="list">
               <li><a href="https://finconecta.com" target="_blank" rel="noopener noreferrer">FinConecta.com</a></li>
-              <li><a>{t.privacyLink}</a></li>
-              <li><a>{t.termsLink}</a></li>
-              <li><a>{t.accessibilityLink}</a></li>
+              {/* TODO: add href once Privacy, Terms, and Accessibility pages exist */}
+              <li><span className="footer-placeholder-link">{t.privacyLink}</span></li>
+              <li><span className="footer-placeholder-link">{t.termsLink}</span></li>
+              <li><span className="footer-placeholder-link">{t.accessibilityLink}</span></li>
             </ul>
           </div>
         </div>

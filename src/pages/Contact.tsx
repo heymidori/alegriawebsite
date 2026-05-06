@@ -9,9 +9,14 @@ export default function Contact() {
   const t = translations[lang].contact;
   const [formData, setFormData] = useState({ name: '', email: '', type: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [typeError, setTypeError] = useState(false);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!formData.type) {
+      setTypeError(true);
+      return;
+    }
     setSubmitted(true);
   }
 
@@ -34,8 +39,8 @@ export default function Contact() {
           {t.types.map(({ icon, title, desc, value }) => (
             <button
               key={value}
-              className={`ct-type-card reveal${formData.type === value ? ' ct-type-card--active' : ''}`}
-              onClick={() => setFormData(prev => ({ ...prev, type: value }))}
+              className={`ct-type-card reveal${formData.type === value ? ' ct-type-card--active' : ''}${typeError && !formData.type ? ' ct-type-card--error' : ''}`}
+              onClick={() => { setFormData(prev => ({ ...prev, type: value })); setTypeError(false); }}
               type="button"
               aria-pressed={formData.type === value}
             >
