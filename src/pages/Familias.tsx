@@ -42,7 +42,7 @@ export default function Familias() {
           <div className="section-label">{tHome.problemLabel}</div>
           <h2 id="problem-heading">{tHome.problemH2}</h2>
           <p className="section-intro" style={{ margin: '0 auto 2.5rem' }}>{tHome.problemIntro}</p>
-          <div className="problems-grid" role="list">
+          <div className="problem-grid" role="list">
             {tHome.problems.map(({ icon, title, desc }) => (
               <div className="problem-card reveal" role="listitem" key={title}>
                 <div className="problem-icon" aria-hidden="true">{icon}</div>
@@ -66,8 +66,10 @@ export default function Familias() {
           <div className="serve-grid" role="list">
             {tHome.serveCards.map(({ title, desc }) => (
               <div className="serve-card reveal" role="listitem" key={title}>
-                <h3>{title}</h3>
-                <p>{desc}</p>
+                <div className="serve-card-body">
+                  <h3>{title}</h3>
+                  <p>{desc}</p>
+                </div>
               </div>
             ))}
           </div>

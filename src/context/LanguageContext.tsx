@@ -7,6 +7,7 @@ interface LangContextType {
   setLang: (l: Lang) => void;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const LanguageContext = createContext<LangContextType>({ lang: 'en', setLang: () => {} });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
@@ -18,6 +19,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useLang() {
   return useContext(LanguageContext);
 }

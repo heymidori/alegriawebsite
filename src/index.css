@@ -265,6 +265,20 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   font-size: 1.1rem; font-weight: 600; color: rgba(255,255,255,0.8);
 }
 
+/* ─── PROBLEM SECTION LIGHT VARIANT ─── */
+.problem-section-light {
+  background: linear-gradient(160deg, #faf9ff 0%, #f3f0ff 60%, #eef2ff 100%);
+  padding: 96px 0;
+}
+.problem-section-light .problem-grid { margin-top: 3rem; }
+.problem-section-light .problem-card {
+  background: #ffffff;
+  border-color: rgba(167,139,250,0.2);
+  box-shadow: 0 4px 20px rgba(100,70,200,0.08), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+.problem-section-light .problem-card h3 { color: var(--dark); }
+.problem-section-light .problem-card p { color: var(--gray); }
+
 /* ─── A QUIÉN SIRVE SECTION ─── */
 .serve-section {
   position: relative;
@@ -1696,6 +1710,34 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   font-size: 0.9rem;
   color: var(--gray);
   line-height: 1.75;
+}
+
+/* ─── FAM TIMELINE DARK VARIANT ─── */
+.fam-item--dark {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(197,149,252,0.18);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.fam-item--dark:hover {
+  border-color: rgba(197,149,252,0.4);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+.fam-item--dark.fam-item--featured {
+  background: rgba(197,149,252,0.1);
+  border-color: rgba(197,149,252,0.35);
+}
+.fam-item--dark h3 { color: #ffffff; }
+.fam-item--dark p { color: rgba(255,255,255,0.6); }
+.fam-item--dark .fam-num {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: transparent;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  line-height: 1;
+  opacity: 1;
 }
 
 /* ─── SEGMENTS ON DARK BACKGROUND ─── */
