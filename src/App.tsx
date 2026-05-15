@@ -7,7 +7,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Impact from './pages/Impact';
-import Markets from './pages/Markets';
+import Comunidades from './pages/Comunidades';
+import Familias from './pages/Familias';
 import Contact from './pages/Contact';
 
 function ScrollToTop() {
@@ -35,7 +36,9 @@ function Layout() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/producto" element={<Product />} />
-        <Route path="/mercados" element={<Markets />} />
+        <Route path="/comunidades" element={<Comunidades />} />
+        <Route path="/familias" element={<Familias />} />
+        <Route path="/mercados" element={<Navigate to="/comunidades" replace />} />
         <Route path="/nosotros" element={<Impact />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="*" element={<Navigate to="/" replace />} />
