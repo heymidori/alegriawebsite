@@ -57,30 +57,6 @@ export default function Familias() {
         </div>
       </section>
 
-      {/* WHAT YOU PUT IN / WHAT YOU GET BACK */}
-      <section className="market-deep market-deep--light" aria-labelledby="exchange-heading">
-        <div className="container">
-          <div className="market-deep-header reveal">
-            <div className="section-label">{t.exchangeLabel}</div>
-            <h2 id="exchange-heading">{t.exchangeH2}</h2>
-          </div>
-          <div className="seg-grid" style={{ marginTop: '2.5rem' }}>
-            <div className="seg-card reveal" role="region" aria-label={t.setupTitle}>
-              <h3>{t.setupTitle}</h3>
-              <ul className="seg-list" role="list">
-                {t.setupItems.map(item => <li key={item}>{item}</li>)}
-              </ul>
-            </div>
-            <div className="seg-card seg-card--accent reveal" role="region" aria-label={t.receiveTitle}>
-              <h3>{t.receiveTitle}</h3>
-              <ul className="seg-list" role="list">
-                {t.receiveItems.map(item => <li key={item}>{item}</li>)}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* HOW IT WORKS — family 4-step timeline */}
       <section className="market-deep market-deep--light" aria-labelledby="family-heading">
         <div className="container">
@@ -125,6 +101,34 @@ export default function Familias() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT YOU PUT IN / WHAT YOU GET BACK */}
+      <section
+        className="problem-section"
+        aria-labelledby="exchange-heading"
+        style={{ backgroundImage: `url(${bgDark4})` }}
+      >
+        <div className="container">
+          <div className="section-label">{t.exchangeLabel}</div>
+          <h2 id="exchange-heading">{t.exchangeH2}</h2>
+          <div className="seg-grid" style={{ marginTop: '2.5rem' }} role="list">
+            <div className="seg-card problem-card reveal" role="listitem" aria-label={t.setupTitle}>
+              <div className="seg-badge seg-badge--dark seg-badge--purple" aria-hidden="true">⚙️</div>
+              <h3>{t.setupTitle}</h3>
+              <ul className="seg-list" role="list">
+                {t.setupItems.map(item => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
+            <div className="seg-card problem-card reveal" role="listitem" aria-label={t.receiveTitle}>
+              <div className="seg-badge seg-badge--dark seg-badge--blue" aria-hidden="true">✨</div>
+              <h3>{t.receiveTitle}</h3>
+              <ul className="seg-list" role="list">
+                {t.receiveItems.map(item => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
