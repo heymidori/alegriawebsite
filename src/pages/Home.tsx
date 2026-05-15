@@ -39,7 +39,7 @@ export default function Home() {
           <div className="hero-btns">
             <button
               className="btn-primary"
-              onClick={() => navigate("/producto")}
+              onClick={() => navigate("/comunidades")}
               aria-label={t.btn1Aria}
             >
               {t.btn1}
@@ -56,7 +56,7 @@ export default function Home() {
             </button>
             <button
               className="btn-secondary"
-              onClick={() => navigate("/mercados")}
+              onClick={() => navigate("/familias")}
               aria-label={t.btn2Aria}
             >
               {t.btn2}
