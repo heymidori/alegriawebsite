@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
+import bgDark4 from '../assets/images/BGDark4.png';
 import heroImg1 from '../assets/images/imageheromarket1.png';
 import heroImg2 from '../assets/images/imageheromarket2.png';
 import heroImg3 from '../assets/images/imageheromarket3.png';
@@ -10,7 +11,6 @@ export default function Familias() {
   const revealRef = useReveal();
   const { lang } = useLang();
   const t = translations[lang].familias;
-  const tHome = translations[lang].home;
   const tMarkets = translations[lang].markets;
 
   return (
@@ -36,16 +36,19 @@ export default function Familias() {
         </div>
       </section>
 
-      {/* THE PROBLEM */}
-      <section className="problem-section-light" aria-labelledby="problem-heading">
+      {/* SCENARIOS */}
+      <section
+        className="problem-section"
+        aria-labelledby="scenarios-heading"
+        style={{ backgroundImage: `url(${bgDark4})` }}
+      >
         <div className="container">
-          <div className="section-label">{tHome.problemLabel}</div>
-          <h2 id="problem-heading">{tHome.problemH2}</h2>
-          <p className="section-intro" style={{ margin: '0 auto 2.5rem' }}>{tHome.problemIntro}</p>
-          <div className="problem-grid" role="list">
-            {tHome.problems.map(({ icon, title, desc }) => (
-              <div className="problem-card reveal" role="listitem" key={title}>
-                <div className="problem-icon" aria-hidden="true">{icon}</div>
+          <div className="section-label">{t.scenariosLabel}</div>
+          <h2 id="scenarios-heading">{t.scenariosH2}</h2>
+          <div className="seg-grid" role="list">
+            {t.scenarios.map(({ icon, title, desc }) => (
+              <div className="seg-card problem-card reveal" role="listitem" key={title}>
+                <div className="seg-badge seg-badge--dark seg-badge--blue" aria-hidden="true">{icon}</div>
                 <h3>{title}</h3>
                 <p>{desc}</p>
               </div>
@@ -54,24 +57,26 @@ export default function Familias() {
         </div>
       </section>
 
-      {/* WHO ALEGRÍA SERVES */}
-      <section className="serve-section" aria-labelledby="serve-heading">
+      {/* WHAT YOU PUT IN / WHAT YOU GET BACK */}
+      <section className="market-deep market-deep--light" aria-labelledby="exchange-heading">
         <div className="container">
-          <div className="section-label">{tHome.serveLabel}</div>
-          <h2 id="serve-heading">
-            {tHome.serveH2a}<br />
-            <span className="accent">{tHome.serveH2b}</span>
-          </h2>
-          <p className="section-intro" style={{ margin: '0 auto 2.5rem' }}>{tHome.serveIntro}</p>
-          <div className="serve-grid" role="list">
-            {tHome.serveCards.map(({ title, desc }) => (
-              <div className="serve-card reveal" role="listitem" key={title}>
-                <div className="serve-card-body">
-                  <h3>{title}</h3>
-                  <p>{desc}</p>
-                </div>
-              </div>
-            ))}
+          <div className="market-deep-header reveal">
+            <div className="section-label">{t.exchangeLabel}</div>
+            <h2 id="exchange-heading">{t.exchangeH2}</h2>
+          </div>
+          <div className="seg-grid" style={{ marginTop: '2.5rem' }}>
+            <div className="seg-card reveal" role="region" aria-label={t.setupTitle}>
+              <h3>{t.setupTitle}</h3>
+              <ul className="seg-list" role="list">
+                {t.setupItems.map(item => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
+            <div className="seg-card seg-card--accent reveal" role="region" aria-label={t.receiveTitle}>
+              <h3>{t.receiveTitle}</h3>
+              <ul className="seg-list" role="list">
+                {t.receiveItems.map(item => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
