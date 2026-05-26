@@ -5,7 +5,7 @@ import { translations } from "../i18n/translations";
 import bgDark5 from "../assets/images/BGDark5.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import heroImg1 from "../assets/images/imageheromarket1.png";
-import heroImg2 from "../assets/images/imageheromarket2.png";
+import heroImg3 from "../assets/images/imageheromarket3.png";
 import heroImg4 from "../assets/images/imageheromarket4.png";
 
 export default function Comunidades() {
@@ -44,8 +44,8 @@ export default function Comunidades() {
         </div>
         <div className="markets-hero-imgs" aria-hidden="true">
           <img src={heroImg1} className="markets-img markets-img--1" alt="" />
-          <img src={heroImg2} className="markets-img markets-img--2" alt="" />
-          <img src={heroImg4} className="markets-img markets-img--4" alt="" />
+          <img src={heroImg4} className="markets-img markets-img--2" alt="" />
+          <img src={heroImg3} className="markets-img markets-img--3" alt="" />
         </div>
       </section>
 
