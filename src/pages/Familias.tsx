@@ -68,13 +68,7 @@ export default function Familias() {
           <div className="fam-timeline" role="list">
             {tMarkets.familySteps.map(({ icon, title, desc }, i) => {
               const isRight = i % 2 === 1;
-              const isFeatured = i === 2;
-              const itemClass = [
-                'fam-item',
-                'reveal',
-                isRight ? 'fam-item--right' : '',
-                isFeatured ? 'fam-item--featured' : '',
-              ].filter(Boolean).join(' ');
+              const itemClass = ['fam-item', 'reveal', isRight ? 'fam-item--right' : ''].filter(Boolean).join(' ');
               return (
                 <div className="fam-row" role="listitem" key={title}>
                   {isRight ? <div className="fam-empty" aria-hidden="true" /> : (
@@ -87,7 +81,7 @@ export default function Familias() {
                       <p>{desc}</p>
                     </div>
                   )}
-                  <div className={`fam-dot${isFeatured ? ' fam-dot--featured' : ''}`} aria-hidden="true" />
+                  <div className="fam-dot" aria-hidden="true" />
                   {isRight ? (
                     <div className={itemClass}>
                       <div className="fam-item-top">
