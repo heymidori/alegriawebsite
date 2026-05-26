@@ -2,6 +2,7 @@ import { useReveal } from "../hooks/useReveal";
 import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 import heroChar from "../assets/images/heroimage.png";
+import fcLogo from "../assets/images/LogoFinConectaAI.png";
 import bgDark2 from "../assets/images/BGDark2.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import pedroImg from "../assets/images/PedroCaseImage.png";
@@ -36,6 +37,28 @@ export default function Impact() {
           aria-hidden="true"
         />
       </section>
+
+      {/* FINCONECTA BAND */}
+      <div className="nos-fc-band" aria-label="FinConecta">
+        <div className="nos-fc-inner">
+          <div className="nos-fc-logo-wrap">
+            <span className="nos-fc-by">{t.fcBy}</span>
+            <a href="https://finconecta.com" target="_blank" rel="noopener noreferrer" aria-label="FinConecta">
+              <img src={fcLogo} className="nos-fc-logo" alt="FinConecta AI" />
+            </a>
+          </div>
+          <div className="nos-fc-divider" aria-hidden="true" />
+          <p className="nos-fc-text">{t.fcDesc}</p>
+          <a
+            href="https://finconecta.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nos-fc-link"
+          >
+            {t.fcLink}
+          </a>
+        </div>
+      </div>
 
       {/* MISSION */}
       <section
@@ -154,13 +177,6 @@ export default function Impact() {
         </div>
       </section>
 
-      {/* FINCONECTA */}
-      <section className="nos-team-section" aria-label={t.teamLabel}>
-        <div className="container nos-team-inner">
-          <div className="nos-team-badge">{t.teamLabel}</div>
-          <p className="nos-team-desc">{t.teamDesc}</p>
-        </div>
-      </section>
     </main>
   );
 }

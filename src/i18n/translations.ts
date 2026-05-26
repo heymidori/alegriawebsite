@@ -183,8 +183,9 @@ export const translations = {
         { icon: '📅', label: 'Presencia diaria', text: '3 años de conversaciones diarias' },
         { icon: '✨', label: 'Lo que vimos', text: 'Alegría. Paciencia. Conexión genuina.' },
       ],
-      teamLabel: 'Powered by FinConecta',
-      teamDesc: 'Alegría es creado por el equipo de FinConecta, con la misión de democratizar el acceso a tecnología de bienestar para adultos mayores en toda Latinoamérica y Estados Unidos.',
+      fcBy: 'Creado por',
+      fcDesc: 'Alegría es creado por el equipo de FinConecta, con la misión de democratizar el acceso a tecnología de bienestar para adultos mayores en toda Latinoamérica y Estados Unidos.',
+      fcLink: 'Visitar FinConecta →',
     },
     markets: {
       heroBadge: '👥 Familias y Organizaciones',
@@ -568,8 +569,9 @@ export const translations = {
         { icon: '📅', label: 'Daily presence', text: '3 years of daily conversations' },
         { icon: '✨', label: 'What we saw', text: 'Joy. Patience. Genuine connection.' },
       ],
-      teamLabel: 'Powered by FinConecta',
-      teamDesc: 'Alegría is created by the FinConecta team, with the mission to democratize access to wellbeing technology for older adults across Latin America and the United States.',
+      fcBy: 'Created by',
+      fcDesc: 'Alegría is created by the FinConecta team, with the mission to democratize access to wellbeing technology for older adults across Latin America and the United States.',
+      fcLink: 'Visit FinConecta →',
     },
     markets: {
       heroBadge: '👥 Families & Care Organizations',
