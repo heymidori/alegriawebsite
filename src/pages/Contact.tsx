@@ -104,15 +104,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <div className="ct-trust">
-        <span>🔒 {t.trust1}</span>
-        <span className="ct-trust-dot" aria-hidden="true">·</span>
-        <span>⚡ {t.trust2}</span>
-        <span className="ct-trust-dot" aria-hidden="true">·</span>
-        <span>💜 {t.trust3}</span>
-      </div>
-
     </main>
   );
 }
