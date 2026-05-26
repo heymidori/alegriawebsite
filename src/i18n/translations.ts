@@ -7,7 +7,6 @@ export const translations = {
         { to: '/comunidades', label: 'Comunidades' },
         { to: '/familias', label: 'Familias' },
         { to: '/nosotros', label: 'Nosotros' },
-        { to: '/contacto', label: 'Contacto' },
       ],
       cta: 'Contáctanos',
       openMenu: 'Abrir menú',
@@ -404,7 +403,6 @@ export const translations = {
         { to: '/comunidades', label: 'Communities' },
         { to: '/familias', label: 'Families' },
         { to: '/nosotros', label: 'About' },
-        { to: '/contacto', label: 'Contact' },
       ],
       cta: 'Contact Us',
       openMenu: 'Open menu',
@@ -432,7 +430,7 @@ export const translations = {
       problemClosing: 'Alegría was created to close this gap.',
       problems: [
         { icon: '🫀', title: 'Health impact', desc: 'Loneliness in older adults carries risks comparable to smoking. It accelerates cognitive decline and worsens depression.' },
-        { icon: '🤝', title: 'Lack of companionship', desc: 'Most people with disabilities don\'t have a daily companion who knows them as people — not as cases.' },
+        { icon: '🤝', title: 'Lack of companionship', desc: 'Most people with disabilities receive care, but few have a daily companion that understands who they are beyond their condition.' },
         { icon: '⏳', title: 'Real limitations', desc: 'Families and care teams want to be present, but work, distance, and staffing shortages make it nearly impossible.' },
       ],
       serveLabel: 'WHO ALEGRÍA SERVES',
@@ -618,7 +616,7 @@ export const translations = {
       familyH2: 'You stay in the loop. Without being in the room.',
       familyIntro: 'Alegría keeps you genuinely connected to your loved one\'s daily life — not just checking a box, but understanding how they\'re really doing.',
       familySteps: [
-        { icon: '✏️', title: 'You configure everything upfront', desc: 'Before the first call, you tell Alegría who they are: their stories, the people they love, what makes them laugh, and the reminders they need. Takes about five minutes.' },
+        { icon: '✏️', title: 'You configure everything upfront', desc: 'Before the first call, you tell Alegría who they are: their stories, the people they love, what makes them laugh, and the reminders they need. Takes about ten minutes.' },
         { icon: '📞', title: 'Alegría shows up every day', desc: 'Alegría calls at the times you set — or your loved one can reach out whenever they want. It remembers what they talked about last time, so every conversation builds on the last.' },
         { icon: '📬', title: 'You receive weekly summaries', desc: 'Each week, a simple summary shows how many conversations happened, what topics came up, and how your loved one engaged. Enough to feel close — nothing overwhelming.' },
         { icon: '🔔', title: 'Gentle alerts when something shifts', desc: 'If Alegría notices a change — less engagement, more sadness, a skipped routine — you get a quiet heads-up before it becomes a concern. Not an alarm. Just awareness.' },
