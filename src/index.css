@@ -131,6 +131,16 @@ nav {
   animation: marketsFloat3 8s ease-in-out infinite alternate;
   animation-delay: 1.6s;
 }
+.markets-img--4 {
+  width: 40%;
+  aspect-ratio: 3/4;
+  top: 18%;
+  right: 2%;
+  z-index: 3;
+  transform: rotate(4deg);
+  animation: marketsFloat3 8s ease-in-out infinite alternate;
+  animation-delay: 1.6s;
+}
 @keyframes marketsFloat1 {
   0%   { transform: rotate(-6deg) translateY(0) scale(1); }
   50%  { transform: rotate(-4deg) translateY(-10px) scale(1.01); }
