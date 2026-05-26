@@ -2,6 +2,7 @@ import { useReveal } from "../hooks/useReveal";
 import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 import heroImpact from "../assets/images/imageheroabout.png";
+import bgDark1 from "../assets/images/BGDark1.png";
 import bgDark2 from "../assets/images/BGDark2.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import pedroImg from "../assets/images/PedroCaseImage.png";
@@ -105,10 +106,18 @@ export default function Impact() {
       <section
         className="nos-reality"
         aria-labelledby="nos-reality-heading"
+        style={{
+          backgroundImage: `url(${bgDark1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="container">
           <div className="nos-reality-header reveal">
-            <div className="section-label" style={{ color: "var(--purple-light)" }}>
+            <div
+              className="section-label"
+              style={{ color: "var(--purple-light)" }}
+            >
               {t.realityLabel}
             </div>
             <h2 id="nos-reality-heading" style={{ color: "#fff" }}>
@@ -118,10 +127,16 @@ export default function Impact() {
           </div>
           <div className="nos-reality-grid" role="list">
             {t.realityCards.map(({ stat, icon, title, desc, note }) => (
-              <article className="nos-reality-card reveal" role="listitem" key={title}>
+              <article
+                className="nos-reality-card reveal"
+                role="listitem"
+                key={title}
+              >
                 <div className="nos-reality-card-top">
                   <span className="nos-reality-stat">{stat}</span>
-                  <span className="nos-reality-icon" aria-hidden="true">{icon}</span>
+                  <span className="nos-reality-icon" aria-hidden="true">
+                    {icon}
+                  </span>
                 </div>
                 <h3 className="nos-reality-title">{title}</h3>
                 <p className="nos-reality-desc">{desc}</p>
@@ -213,7 +228,6 @@ export default function Impact() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

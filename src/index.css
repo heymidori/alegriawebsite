@@ -1235,6 +1235,13 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   position: relative;
   overflow: hidden;
 }
+.nos-reality::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,5,25,0.30);
+  pointer-events: none;
+}
 .nos-reality .container { position: relative; z-index: 1; }
 .nos-reality-header {
   text-align: center;
