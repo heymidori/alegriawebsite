@@ -17,6 +17,11 @@ export default function Contact() {
       setTypeError(true);
       return;
     }
+    const subject = encodeURIComponent(`[Alegría] ${formData.type} — ${formData.name}`);
+    const body = encodeURIComponent(
+      `Nombre: ${formData.name}\nEmail: ${formData.email}\nTipo: ${formData.type}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:info@finconecta.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
@@ -35,11 +40,11 @@ export default function Contact() {
 
       {/* WHO ARE YOU */}
       <section className="ct-types">
-        <div className="ct-types-inner">
+        <div className="ct-types-inner reveal">
           {t.types.map(({ icon, title, desc, value }) => (
             <button
               key={value}
-              className={`ct-type-card reveal${formData.type === value ? ' ct-type-card--active' : ''}${typeError && !formData.type ? ' ct-type-card--error' : ''}`}
+              className={`ct-type-card${formData.type === value ? ' ct-type-card--active' : ''}${typeError && !formData.type ? ' ct-type-card--error' : ''}`}
               onClick={() => { setFormData(prev => ({ ...prev, type: value })); setTypeError(false); }}
               type="button"
               aria-pressed={formData.type === value}
