@@ -5,6 +5,8 @@ import heroImpact from "../assets/images/imageheroabout.png";
 import bgDark2 from "../assets/images/BGDark2.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import pedroImg from "../assets/images/PedroCaseImage.png";
+import logoFC from "../assets/images/LogoFinConectaAI.png";
+import grandma3 from "../assets/images/grandma3.png";
 
 export default function Impact() {
   const revealRef = useReveal();
@@ -72,6 +74,29 @@ export default function Impact() {
           </div>
           <div className="nos-mission-right reveal">
             <p className="nos-mission-p">{t.missionP}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FINCONECTA */}
+      <section className="nos-fc-section" aria-label={t.teamLabel}>
+        <div className="container nos-fc-inner">
+          <div className="nos-fc-left reveal">
+            <div className="nos-fc-badge">{t.teamLabel}</div>
+            <img src={logoFC} className="nos-fc-logo-img" alt="FinConecta AI" />
+            <h2 className="nos-fc-h2">{t.fcHeading}</h2>
+            <p className="nos-fc-body">{t.teamDesc}</p>
+            <a
+              href={t.fcLinkHref}
+              className="nos-fc-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.fcLink}
+            </a>
+          </div>
+          <div className="nos-fc-right reveal" aria-hidden="true">
+            <img src={grandma3} className="nos-fc-img" alt="" />
           </div>
         </div>
       </section>
@@ -158,13 +183,6 @@ export default function Impact() {
         </div>
       </section>
 
-      {/* FINCONECTA */}
-      <section className="nos-team-section" aria-label={t.teamLabel}>
-        <div className="container nos-team-inner">
-          <div className="nos-team-badge">{t.teamLabel}</div>
-          <p className="nos-team-desc">{t.teamDesc}</p>
-        </div>
-      </section>
     </main>
   );
 }

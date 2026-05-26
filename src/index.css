@@ -1143,6 +1143,91 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   margin: 0 auto;
 }
 
+/* ─── FINCONECTA SECTION ─── */
+.nos-fc-section {
+  background: #fff;
+  padding: 6rem 2rem;
+  overflow: hidden;
+}
+.nos-fc-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.nos-fc-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.nos-fc-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple-mid);
+  background: rgba(168,85,247,0.08);
+  border: 1px solid rgba(168,85,247,0.2);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+}
+.nos-fc-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+.nos-fc-h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--dark);
+  margin: 0;
+}
+.nos-fc-body {
+  font-size: 1rem;
+  color: rgba(30,15,60,0.65);
+  line-height: 1.8;
+  margin: 0;
+  max-width: 480px;
+}
+.nos-fc-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--gradient-accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  margin-top: 0.5rem;
+}
+.nos-fc-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+.nos-fc-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nos-fc-img {
+  width: 100%;
+  max-width: 460px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 32px 80px rgba(168,85,247,0.15), 0 0 0 1px rgba(197,149,252,0.2);
+}
+@media (max-width: 900px) {
+  .nos-fc-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .nos-fc-right { order: -1; }
+  .nos-fc-img { height: 320px; max-width: 100%; }
+}
+
 .nos-values-section {
   background: linear-gradient(160deg, #faf8ff 0%, #f0ebff 60%, #eef2ff 100%);
   padding: 6rem 2rem;
