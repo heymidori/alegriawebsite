@@ -1,7 +1,7 @@
 import { useReveal } from "../hooks/useReveal";
 import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
-import heroImpact from "../assets/images/imageheroabout.png";
+import heroChar from "../assets/images/heroimage.png";
 import bgDark2 from "../assets/images/BGDark2.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import pedroImg from "../assets/images/PedroCaseImage.png";
@@ -19,26 +19,22 @@ export default function Impact() {
       aria-label="Sobre Nosotros"
     >
       {/* HERO */}
-      <section className="nos-hero" aria-labelledby="nos-hero-heading">
-        <div className="nos-hero-glow nos-hero-glow--left" aria-hidden="true" />
-        <div
-          className="nos-hero-glow nos-hero-glow--right"
+      <section className="hero" aria-labelledby="nos-hero-heading">
+        <div className="hero-text">
+          <div className="hero-badge">{t.heroBadge}</div>
+          <h1 id="nos-hero-heading">
+            {t.heroH1a}
+            <br />
+            <span className="accent">{t.heroH1b}</span>
+          </h1>
+          <p className="hero-sub">{t.heroSub}</p>
+        </div>
+        <img
+          src={heroChar}
+          className="hero-character"
+          alt=""
           aria-hidden="true"
         />
-        <div className="nos-hero-inner">
-          <div className="nos-hero-text">
-            <div className="hero-badge">{t.heroBadge}</div>
-            <h1 id="nos-hero-heading">
-              {t.heroH1a}
-              <br />
-              <span className="accent">{t.heroH1b}</span>
-            </h1>
-            <p className="hero-sub">{t.heroSub}</p>
-          </div>
-          <div className="nos-hero-img-wrap" aria-hidden="true">
-            <img src={heroImpact} className="nos-hero-img" alt="" />
-          </div>
-        </div>
       </section>
 
       {/* MISSION */}
