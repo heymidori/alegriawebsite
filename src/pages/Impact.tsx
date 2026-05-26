@@ -1,8 +1,7 @@
 import { useReveal } from "../hooks/useReveal";
 import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
-import heroChar from "../assets/images/heroimage.png";
-import fcLogo from "../assets/images/LogoFinConectaAI.png";
+import heroImpact from "../assets/images/imageheroabout.png";
 import bgDark2 from "../assets/images/BGDark2.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import pedroImg from "../assets/images/PedroCaseImage.png";
@@ -20,39 +19,26 @@ export default function Impact() {
       aria-label="Sobre Nosotros"
     >
       {/* HERO */}
-      <section className="hero" aria-labelledby="nos-hero-heading">
-        <div className="hero-text">
-          <div className="hero-badge">{t.heroBadge}</div>
-          <h1 id="nos-hero-heading">
-            {t.heroH1a}
-            <br />
-            <span className="accent">{t.heroH1b}</span>
-          </h1>
-          <p className="hero-sub">{t.heroSub}</p>
-
-          {/* FINCONECTA inline */}
-          <div className="nos-fc-inline">
-            <div className="nos-fc-inline-logo">
-              <span className="nos-fc-by">{t.fcBy}</span>
-              <a href="https://finconecta.com" target="_blank" rel="noopener noreferrer" aria-label="FinConecta">
-                <img src={fcLogo} className="nos-fc-logo" alt="FinConecta AI" />
-              </a>
-            </div>
-            <div className="nos-fc-inline-divider" aria-hidden="true" />
-            <div className="nos-fc-inline-right">
-              <p className="nos-fc-text">{t.fcDesc}</p>
-              <a href="https://finconecta.com" target="_blank" rel="noopener noreferrer" className="nos-fc-link">
-                {t.fcLink}
-              </a>
-            </div>
-          </div>
-        </div>
-        <img
-          src={heroChar}
-          className="hero-character"
-          alt=""
+      <section className="nos-hero" aria-labelledby="nos-hero-heading">
+        <div className="nos-hero-glow nos-hero-glow--left" aria-hidden="true" />
+        <div
+          className="nos-hero-glow nos-hero-glow--right"
           aria-hidden="true"
         />
+        <div className="nos-hero-inner">
+          <div className="nos-hero-text">
+            <div className="hero-badge">{t.heroBadge}</div>
+            <h1 id="nos-hero-heading">
+              {t.heroH1a}
+              <br />
+              <span className="accent">{t.heroH1b}</span>
+            </h1>
+            <p className="hero-sub">{t.heroSub}</p>
+          </div>
+          <div className="nos-hero-img-wrap" aria-hidden="true">
+            <img src={heroImpact} className="nos-hero-img" alt="" />
+          </div>
+        </div>
       </section>
 
       {/* MISSION */}
@@ -172,6 +158,13 @@ export default function Impact() {
         </div>
       </section>
 
+      {/* FINCONECTA */}
+      <section className="nos-team-section" aria-label={t.teamLabel}>
+        <div className="container nos-team-inner">
+          <div className="nos-team-badge">{t.teamLabel}</div>
+          <p className="nos-team-desc">{t.teamDesc}</p>
+        </div>
+      </section>
     </main>
   );
 }
