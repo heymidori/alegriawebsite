@@ -3,7 +3,6 @@ import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 import heroImpact from "../assets/images/imageheroabout.png";
 import bgDark2 from "../assets/images/BGDark2.png";
-import bgDark3 from "../assets/images/BGDark3.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import pedroImg from "../assets/images/PedroCaseImage.png";
 import logoFC from "../assets/images/LogoFinConectaAI.png";
@@ -106,11 +105,6 @@ export default function Impact() {
       <section
         className="nos-reality"
         aria-labelledby="nos-reality-heading"
-        style={{
-          backgroundImage: `url(${bgDark3})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
         <div className="container">
           <div className="nos-reality-header reveal">
