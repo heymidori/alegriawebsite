@@ -3,6 +3,7 @@ import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 import heroImpact from "../assets/images/imageheroabout.png";
 import bgDark2 from "../assets/images/BGDark2.png";
+import bgDark3 from "../assets/images/BGDark3.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import pedroImg from "../assets/images/PedroCaseImage.png";
 import logoFC from "../assets/images/LogoFinConectaAI.png";
@@ -97,6 +98,42 @@ export default function Impact() {
           </div>
           <div className="nos-fc-right reveal" aria-hidden="true">
             <img src={grandma3} className="nos-fc-img" alt="" />
+          </div>
+        </div>
+      </section>
+
+      {/* REALITY */}
+      <section
+        className="nos-reality"
+        aria-labelledby="nos-reality-heading"
+        style={{
+          backgroundImage: `url(${bgDark3})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container">
+          <div className="nos-reality-header reveal">
+            <div className="section-label" style={{ color: "var(--purple-light)" }}>
+              {t.realityLabel}
+            </div>
+            <h2 id="nos-reality-heading" style={{ color: "#fff" }}>
+              {t.realityH2}
+            </h2>
+            <p className="nos-reality-intro">{t.realityIntro}</p>
+          </div>
+          <div className="nos-reality-grid" role="list">
+            {t.realityCards.map(({ stat, icon, title, desc, note }) => (
+              <article className="nos-reality-card reveal" role="listitem" key={title}>
+                <div className="nos-reality-card-top">
+                  <span className="nos-reality-stat">{stat}</span>
+                  <span className="nos-reality-icon" aria-hidden="true">{icon}</span>
+                </div>
+                <h3 className="nos-reality-title">{title}</h3>
+                <p className="nos-reality-desc">{desc}</p>
+                <p className="nos-reality-note">{note}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

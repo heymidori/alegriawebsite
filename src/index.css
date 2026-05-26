@@ -1228,6 +1228,117 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   .nos-fc-img { height: 320px; max-width: 100%; }
 }
 
+/* ─── REALITY SECTION ─── */
+.nos-reality {
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.nos-reality::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,5,25,0.72);
+  pointer-events: none;
+}
+.nos-reality .container { position: relative; z-index: 1; }
+.nos-reality-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 4rem;
+}
+.nos-reality-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin: 0.75rem 0 1rem;
+}
+.nos-reality-intro {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+  margin: 0;
+}
+.nos-reality-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+.nos-reality-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(197,149,252,0.14);
+  border-radius: 28px;
+  padding: 2.5rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.nos-reality-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+  border-radius: 3px 3px 0 0;
+}
+.nos-reality-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197,149,252,0.32);
+}
+.nos-reality-card-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.nos-reality-stat {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+.nos-reality-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  opacity: 0.8;
+  padding-bottom: 0.2rem;
+}
+.nos-reality-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+.nos-reality-desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.8;
+  margin: 0;
+  flex: 1;
+}
+.nos-reality-note {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.22);
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  letter-spacing: 0.01em;
+}
+@media (max-width: 900px) {
+  .nos-reality-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 640px) and (max-width: 900px) {
+  .nos-reality-grid { grid-template-columns: repeat(2, 1fr); }
+  .nos-reality-card:last-child { grid-column: 1 / -1; max-width: 480px; margin: 0 auto; }
+}
+
 .nos-values-section {
   background: linear-gradient(160deg, #faf8ff 0%, #f0ebff 60%, #eef2ff 100%);
   padding: 6rem 2rem;
