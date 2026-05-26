@@ -1324,19 +1324,35 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
 .nos-origin-float-label { font-size: 0.65rem; font-weight: 700; color: var(--purple-light); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; }
 .nos-origin-float-text { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.9); margin: 0; line-height: 1.4; }
 
-/* ── FinConecta band ── */
-.nos-fc-band {
-  background: linear-gradient(135deg, rgba(30,14,60,0.98) 0%, rgba(15,8,35,1) 100%);
-  border-top: 1px solid rgba(197,149,252,0.18);
-  border-bottom: 1px solid rgba(197,149,252,0.18);
-  padding: 2rem 2rem;
-}
-.nos-fc-inner {
-  max-width: 1100px;
-  margin: 0 auto;
+/* ── FinConecta inline hero block ── */
+.nos-fc-inline {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding: 1.1rem 1.25rem;
+  background: rgba(197,149,252,0.07);
+  border: 1px solid rgba(197,149,252,0.18);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+.nos-fc-inline-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+.nos-fc-inline-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(197,149,252,0.2);
+  flex-shrink: 0;
+}
+.nos-fc-inline-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 .nos-fc-logo-wrap {
   display: flex;
@@ -1366,23 +1382,22 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   flex-shrink: 0;
 }
 .nos-fc-text {
-  flex: 1;
-  color: rgba(255,255,255,0.72);
-  font-size: 0.97rem;
-  line-height: 1.65;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.82rem;
+  line-height: 1.55;
   margin: 0;
 }
 .nos-fc-link {
-  flex-shrink: 0;
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.55rem 1.25rem;
+  padding: 0.35rem 0.9rem;
   border: 1px solid rgba(197,149,252,0.4);
   border-radius: 50px;
   color: var(--purple-light);
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: all 0.2s;
@@ -1394,12 +1409,13 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   color: #fff;
 }
 @media (max-width: 700px) {
-  .nos-fc-inner {
+  .nos-fc-inline {
     flex-direction: column;
     text-align: center;
-    gap: 1.25rem;
+    gap: 0.75rem;
   }
-  .nos-fc-divider { width: 60px; height: 1px; }
+  .nos-fc-inline-divider { width: 60px; height: 1px; }
+  .nos-fc-link { align-self: center; }
 }
 
 /* ─── KPI / IMPACT ─── */

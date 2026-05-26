@@ -29,6 +29,23 @@ export default function Impact() {
             <span className="accent">{t.heroH1b}</span>
           </h1>
           <p className="hero-sub">{t.heroSub}</p>
+
+          {/* FINCONECTA inline */}
+          <div className="nos-fc-inline">
+            <div className="nos-fc-inline-logo">
+              <span className="nos-fc-by">{t.fcBy}</span>
+              <a href="https://finconecta.com" target="_blank" rel="noopener noreferrer" aria-label="FinConecta">
+                <img src={fcLogo} className="nos-fc-logo" alt="FinConecta AI" />
+              </a>
+            </div>
+            <div className="nos-fc-inline-divider" aria-hidden="true" />
+            <div className="nos-fc-inline-right">
+              <p className="nos-fc-text">{t.fcDesc}</p>
+              <a href="https://finconecta.com" target="_blank" rel="noopener noreferrer" className="nos-fc-link">
+                {t.fcLink}
+              </a>
+            </div>
+          </div>
         </div>
         <img
           src={heroChar}
@@ -37,28 +54,6 @@ export default function Impact() {
           aria-hidden="true"
         />
       </section>
-
-      {/* FINCONECTA BAND */}
-      <div className="nos-fc-band" aria-label="FinConecta">
-        <div className="nos-fc-inner">
-          <div className="nos-fc-logo-wrap">
-            <span className="nos-fc-by">{t.fcBy}</span>
-            <a href="https://finconecta.com" target="_blank" rel="noopener noreferrer" aria-label="FinConecta">
-              <img src={fcLogo} className="nos-fc-logo" alt="FinConecta AI" />
-            </a>
-          </div>
-          <div className="nos-fc-divider" aria-hidden="true" />
-          <p className="nos-fc-text">{t.fcDesc}</p>
-          <a
-            href="https://finconecta.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nos-fc-link"
-          >
-            {t.fcLink}
-          </a>
-        </div>
-      </div>
 
       {/* MISSION */}
       <section
