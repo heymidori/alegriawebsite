@@ -105,17 +105,17 @@ nav {
 .markets-img--1 {
   width: 38%;
   aspect-ratio: 3/4;
-  top: 8%;
-  left: 8%;
+  top: 6%;
+  left: -2%;
   z-index: 2;
-  transform: rotate(-6deg);
+  transform: rotate(-4deg);
   animation: marketsFloat1 7s ease-in-out infinite alternate;
 }
 .markets-img--2 {
   width: 36%;
   aspect-ratio: 3/4;
   bottom: 4%;
-  left: 26%;
+  left: 32%;
   z-index: 4;
   transform: rotate(-2deg);
   animation: marketsFloat2 6s ease-in-out infinite alternate;
@@ -125,7 +125,7 @@ nav {
   width: 40%;
   aspect-ratio: 3/4;
   top: 18%;
-  right: 2%;
+  right: -2%;
   z-index: 3;
   transform: rotate(4deg);
   animation: marketsFloat3 8s ease-in-out infinite alternate;
