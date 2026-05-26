@@ -65,6 +65,9 @@ export default function Impact() {
                 "
               </span>
               {t.missionQuote.replace(/^"|"$/g, "")}
+              <span className="nos-quote-mark" aria-hidden="true">
+                "
+              </span>
             </blockquote>
           </div>
           <div className="nos-mission-right reveal">
