@@ -3,9 +3,9 @@ import { useReveal } from '../hooks/useReveal';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 import bgDark4 from '../assets/images/BGDark4.png';
-import heroImg1 from '../assets/images/imageheromarket1.png';
 import heroImg2 from '../assets/images/imageheromarket2.png';
-import heroImg3 from '../assets/images/imageheromarket3.png';
+import heroImg5 from '../assets/images/imageheromarket5.png';
+import heroImg6 from '../assets/images/imageheromarket6.png';
 
 export default function Familias() {
   const revealRef = useReveal();
@@ -30,9 +30,9 @@ export default function Familias() {
           </Link>
         </div>
         <div className="markets-hero-imgs" aria-hidden="true">
-          <img src={heroImg1} className="markets-img markets-img--1" alt="" />
+          <img src={heroImg5} className="markets-img markets-img--1" alt="" />
           <img src={heroImg2} className="markets-img markets-img--2" alt="" />
-          <img src={heroImg3} className="markets-img markets-img--3" alt="" />
+          <img src={heroImg6} className="markets-img markets-img--3" alt="" />
         </div>
       </section>
 
