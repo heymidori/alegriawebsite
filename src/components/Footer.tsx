@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import AlegriaLogo from './AlegriaLogo';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
+import logoVerticalWhite from '../assets/images/LogoAlegriaVerticalWhite.svg';
 
 export default function Footer() {
   const { lang } = useLang();
@@ -13,17 +13,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-top">
           <div className="footer-brand">
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.75rem' }}>
-              <AlegriaLogo gradientId="footerLogoGrad" />
-              <div>
-                <div style={{ fontSize: '1.1rem', fontWeight: 700, color: 'white' }}>
-                  <strong>Alegria</strong> AI
-                </div>
-                <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.45)' }}>
-                  Powered by FinConecta
-                </div>
-              </div>
-            </div>
+            <img src={logoVerticalWhite} alt="Alegría AI" className="footer-logo" />
             <p>{t.brandDesc}</p>
           </div>
 
