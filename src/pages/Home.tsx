@@ -3,6 +3,7 @@ import { useReveal } from "../hooks/useReveal";
 import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
 import alegriaPhone from "../assets/images/alegriaphone.png";
+import bgHomeHero from "../assets/images/BGHomeHero.png";
 import bgDark1 from "../assets/images/BGDark1.png";
 import bgDark2 from "../assets/images/BGDark2.png";
 import bgDark3 from "../assets/images/BGDark3.png";
@@ -66,6 +67,8 @@ export default function Home() {
 
         {/* ── Phone + floating glass bubbles ── */}
         <div className="hero-phone-wrap" aria-hidden="true">
+          {/* Background blob */}
+          <img src={bgHomeHero} className="hero-phone-bg" alt="" />
           {/* Bubble 1 — top right: greeting */}
           <div className="hero-bubble hero-bubble--1">
             <div className="hero-bubble-avatar">💜</div>

@@ -176,6 +176,17 @@ nav {
   justify-content: center;
   pointer-events: none;
 }
+.hero-phone-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 1;
+  pointer-events: none;
+}
 .hero-phone-img {
   height: 82%;
   max-height: 580px;
