@@ -73,12 +73,12 @@ nav {
 /* ─── HERO ─── */
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: max(680px, 92vh);
   background: #ffffff;
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 9rem 54% 5rem 5rem;
+  padding: 7rem 54% 4rem 5rem;
 }
 .hero--short { min-height: 65vh; }
 
@@ -188,8 +188,8 @@ nav {
   pointer-events: none;
 }
 .hero-phone-img {
-  height: 70%;
-  max-height: 480px;
+  height: 68%;
+  max-height: 460px;
   width: auto;
   object-fit: contain;
   position: relative;
