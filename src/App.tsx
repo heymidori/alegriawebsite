@@ -11,6 +11,15 @@ import Comunidades from './pages/Comunidades';
 import Familias from './pages/Familias';
 import Contact from './pages/Contact';
 
+const pageTitles: Record<string, { es: string; en: string }> = {
+  '/':           { es: 'Alegría — Compañía con IA para adultos mayores', en: 'Alegría — AI Companion for Older Adults' },
+  '/producto':   { es: 'Producto — Alegría', en: 'Product — Alegría' },
+  '/comunidades':{ es: 'Comunidades — Alegría', en: 'Communities — Alegría' },
+  '/familias':   { es: 'Familias — Alegría', en: 'Families — Alegría' },
+  '/nosotros':   { es: 'Nosotros — Alegría', en: 'About — Alegría' },
+  '/contacto':   { es: 'Contacto — Alegría', en: 'Contact — Alegría' },
+};
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -27,10 +36,21 @@ function LangSync() {
   return null;
 }
 
+function PageTitle() {
+  const { pathname } = useLocation();
+  const { lang } = useLang();
+  useEffect(() => {
+    const entry = pageTitles[pathname];
+    document.title = entry ? entry[lang] : 'Alegría';
+  }, [pathname, lang]);
+  return null;
+}
+
 function Layout() {
   return (
     <>
       <LangSync />
+      <PageTitle />
       <Nav />
       <ScrollToTop />
       <Routes>
