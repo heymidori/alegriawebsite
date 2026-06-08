@@ -1,5 +1,5 @@
 ##
-# (c) 2021-2025
+# (c) 2021-2026
 #     Cloud Ops Works LLC - https://cloudops.works/
 #     Find us on:
 #       GitHub: https://github.com/cloudopsworks
@@ -55,27 +55,28 @@ config:
   requiredReviewers: 1
 
   # Required: needed if not automatic or protection is true
-  reviewers: []
-  #  - elasticguru-bot
-  #  - cloudopsworks-dev
-  #  - cloudopsworks/engineering
+  reviewers:
+    - "berahac"
+    - "abel-abeijon"
+    - "suchostone"
+    - "finconecta-bot"
 
   # Required: needed for permit owners to perform commits under protected branches.
   # Teams are specified as org/team-name
-  owners: []
-  #  - elasticguru-bot
-  #  - cloudopsworks-dev
-  #  - cloudopsworks/admin
+  owners:
+    - "berahac"
+    - "finconecta-team/dev-ops"
 
   # Optional configure the repository members
   contributors:
     admin:
-      - cloudopsworks/admin
-      - cloudopsworks-bot
+      - "finconecta-team/dev-ops"
     triage: []
     pull: []
     push:
-      - cloudopsworks/engineering
+      - "finconecta-team/website-devs"
+      - "finconecta-team/frontend-devs"
+      - "finconecta-team/qa-team"
     maintain: []
 
 ## CD pipeline configuration uncomment and configure accordingly to enable
@@ -140,10 +141,3 @@ cd:
     hotfix:
       env: hotfix
       #targetName: hotfix-target
-    support:
-      - match: 1.5.*
-        env: demo
-        targetName: demo
-      - match: 1.3.*
-        env: demo2
-        targetName: demo2
