@@ -78,7 +78,7 @@ nav {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 6rem 0 5rem 6rem;
+  padding: 9rem 0 5rem 6rem;
 }
 .hero--short { min-height: 65vh; }
 
@@ -227,10 +227,10 @@ nav {
   right: 12%;
   animation: bubbleFloat1 5s ease-in-out infinite alternate;
 }
-/* Bubble 2 — left side, overlapping phone middle */
+/* Bubble 2 — right side, overlapping phone middle */
 .hero-bubble--2 {
-  top: 44%;
-  left: 8%;
+  top: 50%;
+  right: 6%;
   animation: bubbleFloat2 6s ease-in-out infinite alternate;
   animation-delay: 0.7s;
 }
