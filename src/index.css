@@ -221,23 +221,23 @@ nav {
   max-width: 190px;
   pointer-events: none;
 }
-/* Bubble 1 — top, overlapping phone */
+/* Bubble 1 — top-right, slightly lower */
 .hero-bubble--1 {
-  top: 8%;
-  right: 12%;
+  top: 20%;
+  left: 58%;
   animation: bubbleFloat1 5s ease-in-out infinite alternate;
 }
-/* Bubble 2 — right side, overlapping phone middle */
+/* Bubble 2 — right side, lower portion of phone */
 .hero-bubble--2 {
-  top: 60%;
-  left: 54%;
+  top: 62%;
+  left: 60%;
   animation: bubbleFloat2 6s ease-in-out infinite alternate;
   animation-delay: 0.7s;
 }
-/* Bubble 3 — bottom, overlapping phone */
+/* Bubble 3 — left side, vertically centered on phone */
 .hero-bubble--3 {
-  bottom: 14%;
-  left: 14%;
+  top: 48%;
+  left: 16%;
   animation: bubbleFloat3 5.5s ease-in-out infinite alternate;
   animation-delay: 1.3s;
 }
