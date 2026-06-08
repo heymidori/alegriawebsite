@@ -229,7 +229,7 @@ nav {
 }
 /* Bubble 2 — right side, overlapping phone middle */
 .hero-bubble--2 {
-  top: 50%;
+  top: 60%;
   left: 54%;
   animation: bubbleFloat2 6s ease-in-out infinite alternate;
   animation-delay: 0.7s;
