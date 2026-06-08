@@ -164,15 +164,125 @@ nav {
   flex-direction: column;
   align-items: flex-start;
 }
-.hero-character {
+/* ─── HERO PHONE + GLASS BUBBLES ─── */
+.hero-phone-wrap {
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
+  width: 52%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.hero-phone-img {
+  height: 82%;
+  max-height: 580px;
   width: auto;
   object-fit: contain;
-  object-position: right bottom;
-  display: block;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 28px 56px rgba(168,85,247,0.28));
+  animation: phoneFloat 6s ease-in-out infinite alternate;
+}
+@keyframes phoneFloat {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-14px); }
+}
+
+.hero-bubble {
+  position: absolute;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.92);
+  border-radius: 20px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 8px 32px rgba(168,85,247,0.13), 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  z-index: 5;
+  max-width: 220px;
+  pointer-events: none;
+}
+/* Bubble 1 — top right */
+.hero-bubble--1 {
+  top: 10%;
+  right: 4%;
+  animation: bubbleFloat1 5s ease-in-out infinite alternate;
+}
+/* Bubble 2 — left side, mid-height */
+.hero-bubble--2 {
+  top: 44%;
+  left: 3%;
+  animation: bubbleFloat2 6s ease-in-out infinite alternate;
+  animation-delay: 0.7s;
+}
+/* Bubble 3 — bottom left */
+.hero-bubble--3 {
+  bottom: 16%;
+  left: 7%;
+  animation: bubbleFloat3 5.5s ease-in-out infinite alternate;
+  animation-delay: 1.3s;
+}
+@keyframes bubbleFloat1 {
+  0%   { transform: translateY(0) rotate(-1deg); }
+  100% { transform: translateY(-10px) rotate(0.5deg); }
+}
+@keyframes bubbleFloat2 {
+  0%   { transform: translateY(0) rotate(1deg); }
+  100% { transform: translateY(-8px) rotate(-0.5deg); }
+}
+@keyframes bubbleFloat3 {
+  0%   { transform: translateY(0) rotate(-0.5deg); }
+  100% { transform: translateY(-12px) rotate(1deg); }
+}
+.hero-bubble-avatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.hero-bubble-avatar--blue {
+  background: linear-gradient(135deg, #60a5fa, #818cf8);
+}
+.hero-bubble-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.22);
+}
+.hero-bubble-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.hero-bubble-name {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--purple-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 0;
+}
+.hero-bubble-msg {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+  line-height: 1.4;
+}
+@media (max-width: 900px) {
+  .hero-phone-wrap { display: none; }
 }
 
 .hero-content { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 2; width: 100%; }
@@ -2096,13 +2206,17 @@ body.large-text h2 { font-size: clamp(2.1rem, 4vw, 3.2rem); }
   }
   .hero-text .hero-sub { max-width: 100%; }
   .hero-text .hero-btns { justify-content: center; }
-  .hero-character {
+  .hero-phone-wrap {
     position: relative;
     width: 100%;
-    height: auto;
-    max-height: 420px;
-    object-fit: contain;
-    object-position: center bottom;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-phone-img {
+    height: 100%;
+    max-height: 320px;
   }
 }
 
@@ -2124,7 +2238,7 @@ body.large-text h2 { font-size: clamp(2.1rem, 4vw, 3.2rem); }
   .hero-deco { display: none; }
   .footer-top { grid-template-columns: 1fr; }
   section { padding: 4rem 1.25rem; }
-  .hero-character { max-height: 320px; }
+  .hero-phone-img { max-height: 280px; }
   .hp-grid { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
   .hp-right { display: none; }
   .comm-flow { flex-direction: column; align-items: center; }

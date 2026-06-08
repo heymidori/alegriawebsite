@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
-import heroChar from "../assets/images/heroimage.png";
+import alegriaPhone from "../assets/images/alegriaphone.png";
 import bgDark1 from "../assets/images/BGDark1.png";
 import bgDark2 from "../assets/images/BGDark2.png";
 import bgDark3 from "../assets/images/BGDark3.png";
@@ -64,13 +64,37 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ── Character illustration ── */}
-        <img
-          src={heroChar}
-          className="hero-character"
-          alt=""
-          aria-hidden="true"
-        />
+        {/* ── Phone + floating glass bubbles ── */}
+        <div className="hero-phone-wrap" aria-hidden="true">
+          {/* Bubble 1 — top right: greeting */}
+          <div className="hero-bubble hero-bubble--1">
+            <div className="hero-bubble-avatar">💜</div>
+            <div className="hero-bubble-body">
+              <p className="hero-bubble-name">{t.bubble1Name}</p>
+              <p className="hero-bubble-msg">{t.bubble1Msg}</p>
+            </div>
+          </div>
+
+          {/* Bubble 2 — left: active call status */}
+          <div className="hero-bubble hero-bubble--2">
+            <span className="hero-bubble-dot" />
+            <div className="hero-bubble-body">
+              <p className="hero-bubble-name">{t.bubble2Label}</p>
+              <p className="hero-bubble-msg">{t.bubble2Time}</p>
+            </div>
+          </div>
+
+          {/* Phone image */}
+          <img src={alegriaPhone} className="hero-phone-img" alt="" />
+
+          {/* Bubble 3 — bottom left: reply */}
+          <div className="hero-bubble hero-bubble--3">
+            <div className="hero-bubble-avatar hero-bubble-avatar--blue">🎙️</div>
+            <div className="hero-bubble-body">
+              <p className="hero-bubble-msg">{t.bubble3Msg}</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* PROBLEM */}
