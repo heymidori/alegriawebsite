@@ -41,7 +41,7 @@
 #additionalVolumes: {}
 
 # Replicas Required to Run Deployment - only required for Deployment or StatefulSet
-#replicaCount: 1
+replicaCount: 1
 
 # Deployment Strategy - Defaults to Recreate
 #strategy:
@@ -51,7 +51,7 @@
 #    maxUnavailable: 1
 
 # define environment variables here as a map of key: value
-#env:
+env:
 # Uncomment below to disable the aws-sdk instrumentation if not disabled in the code for health checks
 #  - name: OTEL_NODE_DISABLED_INSTRUMENTATIONS
 #    value: "aws-sdk"
@@ -70,27 +70,28 @@ startupProbe:
   enabled: true
 #livenessProbe: {}
 #readinessProbe: {}
-# Limits are set outside or off
-#resources:
-#  limits:
-#    cpu: 500m
-#    memory: 512Mi
-#  requests:
-#    cpu: 400m
-#    memory: 512Mi
+
+# Resources
+resources:
+  requests:
+    cpu: "5m"
+    memory: "16Mi"
+  limits:
+    cpu: "50m"
+    memory: "64Mi"
 
 ingress:
   enabled: true
   ingressClassName: nginx
   rules:
-    - host: DEV-URL
+    - host: alegria.dev.finconecta.com
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: PROJECT_NAME-helm
+                name: finconecta-website-alegria-helm
                 port:
                   number: 80
 
