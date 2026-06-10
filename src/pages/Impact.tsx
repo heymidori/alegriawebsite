@@ -6,7 +6,7 @@ import bgDark1 from "../assets/images/BGDark1.png";
 import bgDark2 from "../assets/images/BGDark2.png";
 import bgDark4 from "../assets/images/BGDark4.png";
 import pedroImg from "../assets/images/PedroCaseImage.png";
-import logoFC from "../assets/images/LogoFinConectaAI.png";
+import logoAlegria from "../assets/images/LogoAlegria.svg";
 import grandma3 from "../assets/images/grandma3.png";
 
 export default function Impact() {
@@ -79,22 +79,14 @@ export default function Impact() {
         </div>
       </section>
 
-      {/* FINCONECTA */}
+      {/* TEAM */}
       <section className="nos-fc-section" aria-label={t.teamLabel}>
         <div className="container nos-fc-inner">
           <div className="nos-fc-left reveal">
             <div className="nos-fc-badge">{t.teamLabel}</div>
-            <img src={logoFC} className="nos-fc-logo-img" alt="FinConecta AI" />
+            <img src={logoAlegria} className="nos-fc-logo-img" alt="Alegría" />
             <h2 className="nos-fc-h2">{t.fcHeading}</h2>
             <p className="nos-fc-body">{t.teamDesc}</p>
-            <a
-              href={t.fcLinkHref}
-              className="nos-fc-cta"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t.fcLink}
-            </a>
           </div>
           <div className="nos-fc-right reveal" aria-hidden="true">
             <img src={grandma3} className="nos-fc-img" alt="" />
