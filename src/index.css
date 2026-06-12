@@ -1228,6 +1228,10 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+@media (max-width: 640px) {
+  .nos-hero-pills { gap: 0.5rem; margin-top: 1.4rem; }
+  .nos-hero-pill { padding: 6px 12px; font-size: 0.76rem; }
+}
 .nos-hero-img {
   box-shadow: 0 24px 64px rgba(168,85,247,0.18), 0 0 0 1px rgba(197,149,252,0.2);
 }
@@ -2461,6 +2465,12 @@ body.large-text h2 { font-size: clamp(2.1rem, 4vw, 3.2rem); }
     min-height: auto;
   }
   .markets-hero-imgs { display: none; }
+  .hero-markets .hero-sub { max-width: 100%; }
+}
+
+/* Product hero: min-height forces empty space after chat mockup is hidden */
+@media (max-width: 768px) {
+  .hero-product { min-height: auto; }
 }
 
 /* Impact hero: 6rem side padding is too wide on mobile */
