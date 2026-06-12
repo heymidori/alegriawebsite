@@ -109,7 +109,7 @@ nav {
   width: 40%;
   aspect-ratio: 3/4;
   top: 5%;
-  left: 2%;
+  left: -8%;
   z-index: 2;
   animation: marketsFloat1 6s ease-in-out infinite;
 }
