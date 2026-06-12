@@ -37,6 +37,13 @@ export default function Impact() {
               <span className="accent">{t.heroH1b}</span>
             </h1>
             <p className="hero-sub">{t.heroSub}</p>
+            <div className="nos-hero-pills">
+              {t.heroPills.map(({ icon, label }) => (
+                <span className="nos-hero-pill" key={label}>
+                  <span aria-hidden="true">{icon}</span> {label}
+                </span>
+              ))}
+            </div>
           </div>
           <div className="nos-hero-img-wrap" aria-hidden="true">
             <img src={heroImpact} className="nos-hero-img" alt="" />
