@@ -54,7 +54,7 @@ export const translations = {
       ],
       whatLabel: '¿Cómo funciona?',
       whatH2: 'Tú lo configuras. Ellos solo hablan.',
-      whatIntro: 'Alegría es un agente de voz con IA, 100% sin pantallas, que tú personalizas como familia antes del primer saludo. Sin apps, sin contraseñas, sin frustraciones.',
+      whatIntro: 'Alegría es un agente de voz con IA que tu familia configura antes del primer saludo. Para tu ser querido, es tan simple como hacer una llamada.',
       features: [
         { icon: '⚙️', title: 'Configuras', desc: 'Tú defines los temas, el tono y los horarios antes del primer saludo. Tu ser querido solo necesita hablar.' },
         { icon: '🤝', title: 'Conecta', desc: 'Alegría llama (o recibe la llamada) y convierte cada interacción en una conversación real, cálida y sin fricción.' },
@@ -484,7 +484,7 @@ export const translations = {
       ],
       whatLabel: 'How does it work?',
       whatH2: 'You set it up. They just talk.',
-      whatIntro: 'Alegría is a 100% screen-free AI voice agent you personalize as a family before the very first hello. No apps, no passwords, no frustration.',
+      whatIntro: 'Alegría is an AI voice agent your family configures before the very first hello. For your loved one, it\'s as simple as making a phone call.',
       features: [
         { icon: '⚙️', title: 'Configure', desc: 'Set the topics, tone, and schedule before the first hello. Your loved one only needs to speak.' },
         { icon: '🤝', title: 'Connect', desc: 'Alegría calls (or takes the call) and turns every interaction into a real, warm, friction-free conversation.' },
