@@ -84,7 +84,7 @@ export default function Impact() {
         <div className="container nos-fc-inner">
           <div className="nos-fc-left reveal">
             <div className="nos-fc-badge">{t.teamLabel}</div>
-            <img src={logoFC} className="nos-fc-logo-img" alt="FinConecta AI" />
+            <img src={logoFC} className="nos-fc-logo-img" alt="FinConecta AI" loading="lazy" />
             <h2 className="nos-fc-h2">{t.fcHeading}</h2>
             <p className="nos-fc-body">{t.teamDesc}</p>
             <a
@@ -97,7 +97,7 @@ export default function Impact() {
             </a>
           </div>
           <div className="nos-fc-right reveal" aria-hidden="true">
-            <img src={grandma3} className="nos-fc-img" alt="" />
+            <img src={grandma3} className="nos-fc-img" alt="" loading="lazy" />
           </div>
         </div>
       </section>
@@ -212,7 +212,7 @@ export default function Impact() {
 
           {/* RIGHT — image + floats */}
           <div className="nos-origin-visual reveal" aria-hidden="true">
-            <img src={pedroImg} className="nos-origin-img" alt="" />
+            <img src={pedroImg} className="nos-origin-img" alt="" loading="lazy" />
             {t.originFloats.map(({ icon, label, text }, i) => (
               <div
                 className={`nos-origin-float nos-origin-float--${i + 1}`}

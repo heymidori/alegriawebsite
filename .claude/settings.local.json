@@ -15,7 +15,9 @@
       "WebFetch(domain:www.youtube.com)",
       "mcp__plugin_product-management_notion__notion-update-page",
       "mcp__plugin_product-management_notion__notion-search",
-      "mcp__plugin_product-management_notion__notion-create-pages"
+      "mcp__plugin_product-management_notion__notion-create-pages",
+      "mcp__1059f862-52d8-4b75-8a60-1c40100ee579__notion-search",
+      "mcp__1059f862-52d8-4b75-8a60-1c40100ee579__notion-create-pages"
     ]
   }
 }

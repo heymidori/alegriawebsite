@@ -166,7 +166,7 @@ export default function Home() {
                 key={title}
               >
                 <div className="serve-card-img-wrap">
-                  <img src={img} alt={alt} className="serve-card-img" />
+                  <img src={img} alt={alt} className="serve-card-img" loading="lazy" />
                 </div>
                 <div className="serve-card-body">
                   <h3>{title}</h3>
@@ -285,7 +285,7 @@ export default function Home() {
 
             {/* RIGHT — mockup + floating cards */}
             <div className="flex-mockup-wrap" aria-hidden="true">
-              <img src={PhoneMockup} alt="" className="flex-mockup-img" />
+              <img src={PhoneMockup} alt="" className="flex-mockup-img" loading="lazy" />
               <div className="flex-float-card flex-float-card--phone">
                 <span className="flex-float-emoji">{t.flexCards[0].icon}</span>
                 <div>
