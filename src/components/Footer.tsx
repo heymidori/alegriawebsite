@@ -32,10 +32,9 @@ export default function Footer() {
             <h4>{t.contactLabel}</h4>
             <ul role="list">
               <li><a href="https://finconecta.com" target="_blank" rel="noopener noreferrer">FinConecta.com</a></li>
-              {/* TODO: add href once Privacy, Terms, and Accessibility pages exist */}
-              <li><span className="footer-placeholder-link">{t.privacyLink}</span></li>
-              <li><span className="footer-placeholder-link">{t.termsLink}</span></li>
-              <li><span className="footer-placeholder-link">{t.accessibilityLink}</span></li>
+              <li><Link to="/contacto">{t.privacyLink}</Link></li>
+              <li><Link to="/contacto">{t.termsLink}</Link></li>
+              <li><Link to="/contacto">{t.accessibilityLink}</Link></li>
             </ul>
           </div>
         </div>

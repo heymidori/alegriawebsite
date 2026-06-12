@@ -2200,7 +2200,7 @@ body.large-text h2 { font-size: clamp(2.1rem, 4vw, 3.2rem); }
 
 /* ─── SCROLL REVEAL ─── */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal[data-visible="true"] { opacity: 1; transform: translateY(0); }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
