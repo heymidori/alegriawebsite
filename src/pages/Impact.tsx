@@ -46,7 +46,55 @@ export default function Impact() {
             </div>
           </div>
           <div className="nos-hero-img-wrap" aria-hidden="true">
-            <img src={heroImpact} className="nos-hero-img" alt="" />
+            <div className="nos-char-wrap">
+
+              {/* Heart bubble — upper right */}
+              <div className="nos-char-bubble nos-char-bubble--heart">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                  <defs>
+                    <linearGradient id="b-heart" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#e879f9"/>
+                      <stop offset="100%" stopColor="#a855f7"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" fill="url(#b-heart)"/>
+                </svg>
+              </div>
+
+              {/* Chat bubble — left middle */}
+              <div className="nos-char-bubble nos-char-bubble--chat">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                  <defs>
+                    <linearGradient id="b-chat" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#818cf8"/>
+                      <stop offset="100%" stopColor="#60a5fa"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" fill="url(#b-chat)"/>
+                  <circle cx="8" cy="10" r="1" fill="white"/>
+                  <circle cx="12" cy="10" r="1" fill="white"/>
+                  <circle cx="16" cy="10" r="1" fill="white"/>
+                </svg>
+              </div>
+
+              {/* Smile bubble — lower right */}
+              <div className="nos-char-bubble nos-char-bubble--smile">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                  <defs>
+                    <linearGradient id="b-smile" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#c595fc"/>
+                      <stop offset="100%" stopColor="#818cf8"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="12" cy="12" r="10" fill="url(#b-smile)"/>
+                  <path d="M8.5 14c1 1.5 2.5 2 3.5 2s2.5-.5 3.5-2" stroke="white" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+                  <circle cx="9.5" cy="10" r="1.5" fill="white"/>
+                  <circle cx="14.5" cy="10" r="1.5" fill="white"/>
+                </svg>
+              </div>
+
+              <img src={heroImpact} className="nos-hero-img" alt="" loading="eager" />
+            </div>
           </div>
         </div>
       </section>
