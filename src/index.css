@@ -1180,7 +1180,7 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   padding-bottom: 4rem;
 }
 .nos-hero-img-wrap {
-  flex: 0 0 44%;
+  flex: 0 0 50%;
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -1196,7 +1196,7 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
 }
 .nos-hero-img {
   width: 100%;
-  max-width: 460px;
+  max-width: 580px;
   border-radius: 0;
   box-shadow: none;
   object-fit: contain;
@@ -1204,6 +1204,7 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--dar
   display: block;
   animation: none;
 }
+.nos-hero h1 { font-size: clamp(1.7rem, 2.6vw, 2.6rem); }
 
 /* ── Glass bubbles ── */
 .nos-char-bubble {
