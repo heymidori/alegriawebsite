@@ -2491,6 +2491,8 @@ body.large-text h2 { font-size: clamp(2.1rem, 4vw, 3.2rem); }
   font-family: 'Poppins', sans-serif;
 }
 .ct-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(168,85,247,0.45); }
+.ct-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.ct-form-error { color: #dc2626; font-size: 0.9rem; font-weight: 600; margin: -0.5rem 0 0; }
 
 .ct-trust {
   background: white;

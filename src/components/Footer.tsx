@@ -32,9 +32,6 @@ export default function Footer() {
             <h4>{t.contactLabel}</h4>
             <ul role="list">
               <li><a href="https://finconecta.com" target="_blank" rel="noopener noreferrer">FinConecta.com</a></li>
-              <li><Link to="/contacto">{t.privacyLink}</Link></li>
-              <li><Link to="/contacto">{t.termsLink}</Link></li>
-              <li><Link to="/contacto">{t.accessibilityLink}</Link></li>
             </ul>
           </div>
         </div>

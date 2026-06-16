@@ -13,6 +13,11 @@ export const translations = {
       mainNav: 'Navegación principal',
       goHome: 'Ir al inicio',
     },
+    notFound: {
+      title: 'Página no encontrada',
+      desc: 'La página que buscas no existe o fue movida.',
+      cta: 'Volver al inicio',
+    },
     home: {
       heroBadge: 'Construido junto a cuidadores, implementado en comunidades reales',
       heroH1a: 'Toda persona merece a alguien ',
@@ -358,6 +363,8 @@ export const translations = {
       placeholderEmail: 'tucorreo@email.com',
       placeholderMessage: 'Cuéntanos cómo podemos ayudarte...',
       submitBtn: 'Enviar mensaje',
+      sendingBtn: 'Enviando...',
+      sendError: 'No pudimos enviar tu mensaje. Por favor intenta de nuevo.',
       successTitle: '¡Mensaje enviado!',
       successSub: 'Gracias por escribirnos. Te contactaremos en menos de 24 horas.',
       trust1: 'Tus datos son privados',
@@ -447,6 +454,11 @@ export const translations = {
       openMenu: 'Open menu',
       mainNav: 'Main navigation',
       goHome: 'Go to home',
+    },
+    notFound: {
+      title: 'Page not found',
+      desc: "The page you're looking for doesn't exist or was moved.",
+      cta: 'Back to home',
     },
     home: {
       heroBadge: 'Built alongside caregivers, deployed in real communities',
@@ -782,6 +794,8 @@ export const translations = {
       placeholderEmail: 'you@email.com',
       placeholderMessage: 'Tell us how we can help...',
       submitBtn: 'Send message',
+      sendingBtn: 'Sending...',
+      sendError: "We couldn't send your message. Please try again.",
       successTitle: 'Message sent!',
       successSub: "Thanks for reaching out. We'll get back to you within 24 hours.",
       trust1: 'Your data is private',

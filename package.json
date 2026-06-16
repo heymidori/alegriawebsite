@@ -11,6 +11,7 @@
     "translate": "tsx scripts/translate.ts"
   },
   "dependencies": {
+    "nodemailer": "^9.0.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.14.1"
@@ -19,8 +20,10 @@
     "@anthropic-ai/sdk": "^0.55.0",
     "@eslint/js": "^9.39.4",
     "@types/node": "^24.12.2",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vercel/node": "^5.8.17",
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
