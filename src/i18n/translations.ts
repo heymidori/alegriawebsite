@@ -464,7 +464,7 @@ export const translations = {
       heroBadge: 'Built alongside caregivers, deployed in real communities',
       heroH1a: 'Every person deserves someone ',
       heroH1b: 'who remembers their story.',
-      heroSub: 'Alegría is an AI companion for older adults, elderly people with cognitive decline, and adults with disabilities. By phone or through an app, whatever best suits the person, Alegría becomes a friend who is present every day.',
+      heroSub: 'Alegría is an AI companion for adults and elderly people with cognitive decline. Either by phone or through an app, Alegría becomes a friend who is present every day.',
       btn1: 'For Communities',
       btn1Aria: 'For Communities',
       btn2: 'For Family',
