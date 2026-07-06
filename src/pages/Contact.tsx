@@ -1,27 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { useReveal } from '../hooks/useReveal';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (
-        container: HTMLElement,
-        options: {
-          sitekey: string;
-          size?: 'invisible';
-          callback: (token: string) => void;
-          'error-callback'?: () => void;
-        }
-      ) => string;
-      execute: (widgetId: string) => void;
-      reset: (widgetId: string) => void;
-    };
-  }
-}
-
-const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY as string;
+const FORMSPREE_URL = 'https://formspree.io/f/xpqgnrgd';
 
 export default function Contact() {
   const revealRef = useReveal();
@@ -33,76 +15,7 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState(false);
 
-  const turnstileRef = useRef<HTMLDivElement>(null);
-  const widgetIdRef = useRef<string | null>(null);
-  const pendingFormRef = useRef<typeof formData | null>(null);
-
-  useEffect(() => {
-    if (!TURNSTILE_SITE_KEY) return;
-
-    function renderWidget() {
-      if (!turnstileRef.current || !window.turnstile || widgetIdRef.current) return;
-      widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
-        sitekey: TURNSTILE_SITE_KEY,
-        size: 'invisible',
-        callback: async (token: string) => {
-          const pending = pendingFormRef.current;
-          if (!pending) return;
-          await sendContactRequest(pending, token);
-        },
-        'error-callback': () => {
-          setSending(false);
-          setSendError(true);
-        },
-      });
-    }
-
-    if (window.turnstile) {
-      renderWidget();
-      return;
-    }
-
-    const existing = document.querySelector<HTMLScriptElement>(
-      'script[src^="https://challenges.cloudflare.com/turnstile"]'
-    );
-    if (existing) {
-      existing.addEventListener('load', renderWidget);
-      return () => existing.removeEventListener('load', renderWidget);
-    }
-
-    const script = document.createElement('script');
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-    script.async = true;
-    script.defer = true;
-    script.onload = renderWidget;
-    document.body.appendChild(script);
-
-    return () => {
-      script.onload = null;
-    };
-  }, []);
-
-  async function sendContactRequest(data: typeof formData, turnstileToken: string) {
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, turnstileToken }),
-      });
-      if (!res.ok) throw new Error('Request failed');
-      setSubmitted(true);
-    } catch {
-      setSendError(true);
-    } finally {
-      setSending(false);
-      pendingFormRef.current = null;
-      if (widgetIdRef.current && window.turnstile) {
-        window.turnstile.reset(widgetIdRef.current);
-      }
-    }
-  }
-
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!formData.type) {
       setTypeError(true);
@@ -110,13 +23,23 @@ export default function Contact() {
     }
     setSendError(false);
     setSending(true);
-    pendingFormRef.current = formData;
-
-    if (widgetIdRef.current && window.turnstile) {
-      window.turnstile.execute(widgetIdRef.current);
-    } else {
-      setSending(false);
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: `[Alegría] ${formData.type} — ${formData.name}`,
+          message: `Tipo: ${formData.type}\n\n${formData.message}`,
+        }),
+      });
+      if (!res.ok) throw new Error('Request failed');
+      setSubmitted(true);
+    } catch {
       setSendError(true);
+    } finally {
+      setSending(false);
     }
   }
 
@@ -198,7 +121,6 @@ export default function Contact() {
                   onChange={e => setFormData(prev => ({ ...prev, message: e.target.value }))}
                 />
               </div>
-              <div ref={turnstileRef} />
               {sendError && (
                 <p className="ct-form-error" role="alert">{t.sendError}</p>
               )}
