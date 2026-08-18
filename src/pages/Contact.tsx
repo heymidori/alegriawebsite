@@ -57,7 +57,7 @@ export default function Contact() {
       </section>
 
       {/* WHO ARE YOU */}
-      <section className="ct-types">
+      {!submitted && <section className="ct-types">
         <div className="ct-types-inner reveal">
           {t.types.map(({ icon, title, desc, value }) => (
             <button
@@ -78,14 +78,27 @@ export default function Contact() {
             </p>
           )}
         </div>
-      </section>
+      </section>}
 
       {/* FORM */}
       <section className="ct-form-section">
         <div className="ct-form-wrap">
           {submitted ? (
             <div className="ct-success">
-              <span className="ct-success-icon">✅</span>
+              <div className="ct-success-ring" aria-hidden="true">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                  <circle cx="28" cy="28" r="27" stroke="url(#sg)" strokeWidth="2"/>
+                  <polyline points="16,28 24,36 40,20" stroke="url(#sg2)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <defs>
+                    <linearGradient id="sg" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#a78bfa"/><stop offset="1" stopColor="#7c3aed"/>
+                    </linearGradient>
+                    <linearGradient id="sg2" x1="16" y1="28" x2="40" y2="28" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#a78bfa"/><stop offset="1" stopColor="#7c3aed"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
               <h2>{t.successTitle}</h2>
               <p>{t.successSub}</p>
             </div>
