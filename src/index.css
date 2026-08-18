@@ -292,7 +292,7 @@ nav {
   line-height: 1.4;
 }
 @media (max-width: 900px) {
-  .hero-phone-wrap { display: none; }
+  .hero-phone-bg { display: none; }
 }
 
 .hero-content { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 2; width: 100%; }
@@ -2282,9 +2282,13 @@ body.large-text h2 { font-size: clamp(2.1rem, 4vw, 3.2rem); }
   .serve-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 900px) {
+  .serve-section { padding: 96px 1.25rem; }
+}
+
 @media (max-width: 600px) {
   .serve-grid { grid-template-columns: 1fr; }
-  .serve-section { padding: 64px 0; }
+  .serve-section { padding: 64px 1.25rem; }
 }
 
 @media (max-width: 900px) {
