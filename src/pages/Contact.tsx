@@ -72,6 +72,11 @@ export default function Contact() {
               <span className="ct-type-desc">{desc}</span>
             </button>
           ))}
+          {typeError && !formData.type && (
+            <p className="ct-form-error" role="alert" style={{ textAlign: 'center', marginTop: '0.75rem' }}>
+              {lang === 'es' ? 'Por favor selecciona una opción antes de continuar.' : 'Please select an option before continuing.'}
+            </p>
+          )}
         </div>
       </section>
 
@@ -79,7 +84,7 @@ export default function Contact() {
       <section className="ct-form-section">
         <div className="ct-form-wrap">
           {submitted ? (
-            <div className="ct-success reveal">
+            <div className="ct-success">
               <span className="ct-success-icon">✅</span>
               <h2>{t.successTitle}</h2>
               <p>{t.successSub}</p>
