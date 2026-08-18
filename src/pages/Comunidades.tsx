@@ -19,7 +19,7 @@ export default function Comunidades() {
       ref={revealRef}
       style={{ paddingTop: 72 }}
       role="main"
-      aria-label="Comunidades de cuidado"
+      aria-label={lang === 'es' ? 'Comunidades de cuidado' : 'Care communities'}
     >
       {/* HERO */}
       <section
@@ -36,16 +36,16 @@ export default function Comunidades() {
           <p className="hero-sub">{t.heroSub}</p>
           <Link
             to="/contacto"
-            className="btn btn-primary"
+            className="btn-primary"
             aria-label={t.heroCta}
           >
             {t.heroCta}
           </Link>
         </div>
         <div className="markets-hero-imgs" aria-hidden="true">
-          <img src={heroImg1} className="markets-img markets-img--1" alt="" />
-          <img src={heroImg4} className="markets-img markets-img--2" alt="" />
-          <img src={heroImg3} className="markets-img markets-img--3" alt="" />
+          <img src={heroImg1} className="markets-img markets-img--1" alt="" fetchPriority="high" />
+          <img src={heroImg4} className="markets-img markets-img--2" alt="" loading="lazy" />
+          <img src={heroImg3} className="markets-img markets-img--3" alt="" loading="lazy" />
         </div>
       </section>
 
@@ -257,7 +257,7 @@ export default function Comunidades() {
           <h2 id="cta-heading">{t.ctaH2}</h2>
           <Link
             to="/contacto"
-            className="btn btn-primary"
+            className="btn-primary"
             aria-label={t.ctaBtn}
           >
             {t.ctaBtn}

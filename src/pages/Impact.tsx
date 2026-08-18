@@ -93,7 +93,7 @@ export default function Impact() {
                 </svg>
               </div>
 
-              <img src={heroImpact} className="nos-hero-img" alt="" loading="eager" />
+              <img src={heroImpact} className="nos-hero-img" alt="" fetchPriority="high" />
             </div>
           </div>
         </div>

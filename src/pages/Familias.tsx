@@ -14,7 +14,7 @@ export default function Familias() {
   const tMarkets = translations[lang].markets;
 
   return (
-    <main ref={revealRef} style={{ paddingTop: 72 }} role="main" aria-label="Para familias">
+    <main ref={revealRef} style={{ paddingTop: 72 }} role="main" aria-label={lang === 'es' ? 'Para familias' : 'For families'}>
 
       {/* HERO */}
       <section className="hero hero-markets" aria-labelledby="familias-hero-heading">
@@ -25,14 +25,14 @@ export default function Familias() {
             <span className="accent">{t.heroH1b}</span>
           </h1>
           <p className="hero-sub">{t.heroSub}</p>
-          <Link to="/contacto" className="btn btn-primary" aria-label={t.heroCta}>
+          <Link to="/contacto" className="btn-primary" aria-label={t.heroCta}>
             {t.heroCta}
           </Link>
         </div>
         <div className="markets-hero-imgs" aria-hidden="true">
-          <img src={heroImg5} className="markets-img markets-img--1" alt="" />
-          <img src={heroImg2} className="markets-img markets-img--2" alt="" />
-          <img src={heroImg6} className="markets-img markets-img--3" alt="" />
+          <img src={heroImg5} className="markets-img markets-img--1" alt="" fetchPriority="high" />
+          <img src={heroImg2} className="markets-img markets-img--2" alt="" loading="lazy" />
+          <img src={heroImg6} className="markets-img markets-img--3" alt="" loading="lazy" />
         </div>
       </section>
 
@@ -131,7 +131,7 @@ export default function Familias() {
       <section className="cta-section" aria-labelledby="cta-heading">
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 id="cta-heading">{t.ctaH2}</h2>
-          <Link to="/contacto" className="btn btn-primary" aria-label={t.ctaBtn}>
+          <Link to="/contacto" className="btn-primary" aria-label={t.ctaBtn}>
             {t.ctaBtn}
           </Link>
         </div>
