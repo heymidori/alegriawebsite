@@ -9,9 +9,9 @@ import bgDark2 from "../assets/images/BGDark2.webp";
 import bgDark3 from "../assets/images/BGDark3.webp";
 import PhoneMockup from "../assets/images/PhoneMockupAlegria.webp";
 import grandma2 from "../assets/images/grandma2.webp";
-import grandmaKnitting from "../assets/images/GrandmaKnitting.jpeg";
-import manPainting from "../assets/images/ManPainting.jpeg";
-import grandpaWaving from "../assets/images/GrandpaWaving.jpeg";
+import grandmaKnitting from "../assets/images/GrandmaKnitting.webp";
+import manPainting from "../assets/images/ManPainting.webp";
+import grandpaWaving from "../assets/images/GrandpaWaving.webp";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -68,7 +68,7 @@ export default function Home() {
         {/* ── Phone + floating glass bubbles ── */}
         <div className="hero-phone-wrap" aria-hidden="true">
           {/* Background blob */}
-          <img src={bgHomeHero} className="hero-phone-bg" alt="" />
+          <img src={bgHomeHero} className="hero-phone-bg" alt="" fetchPriority="high" />
           {/* Bubble 1 — top right: greeting */}
           <div className="hero-bubble hero-bubble--1">
             <div className="hero-bubble-avatar">💜</div>
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
 
           {/* Phone image */}
-          <img src={alegriaPhone} className="hero-phone-img" alt="" />
+          <img src={alegriaPhone} className="hero-phone-img" alt="" fetchPriority="high" />
 
           {/* Bubble 3 — bottom left: reply */}
           <div className="hero-bubble hero-bubble--3">
@@ -173,7 +173,7 @@ export default function Home() {
                   <p>{desc}</p>
                   <button
                     className="serve-card-btn"
-                    onClick={() => navigate('/mercados')}
+                    onClick={() => navigate('/comunidades')}
                   >
                     {t.serveBtn}
                   </button>
@@ -231,6 +231,7 @@ export default function Home() {
               <img
                 src={grandma2}
                 alt=""
+                loading="lazy"
                 style={{
                   width: "100%",
                   height: "100%",

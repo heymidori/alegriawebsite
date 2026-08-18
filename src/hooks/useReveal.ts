@@ -9,6 +9,7 @@ export function useReveal() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             (entry.target as HTMLElement).dataset.visible = 'true';
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -19,7 +20,7 @@ export function useReveal() {
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  });
+  }, []);
 
   return containerRef;
 }
