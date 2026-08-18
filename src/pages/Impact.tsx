@@ -1,13 +1,13 @@
 import { useReveal } from "../hooks/useReveal";
 import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
-import heroImpact from "../assets/images/imageheroabout.png";
-import bgDark1 from "../assets/images/BGDark1.png";
-import bgDark2 from "../assets/images/BGDark2.png";
-import bgDark4 from "../assets/images/BGDark4.png";
-import pedroImg from "../assets/images/PedroCaseImage.png";
-import logoFC from "../assets/images/LogoFinConectaAI.png";
-import grandma3 from "../assets/images/grandma3.png";
+import heroImpact from "../assets/images/imageheroabout.webp";
+import bgDark1 from "../assets/images/BGDark1.webp";
+import bgDark2 from "../assets/images/BGDark2.webp";
+import bgDark4 from "../assets/images/BGDark4.webp";
+import pedroImg from "../assets/images/PedroCaseImage.webp";
+import logoFC from "../assets/images/LogoFinConectaAI.webp";
+import grandma3 from "../assets/images/grandma3.webp";
 
 export default function Impact() {
   const revealRef = useReveal();

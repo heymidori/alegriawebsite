@@ -1,11 +1,11 @@
 import { useReveal } from '../hooks/useReveal';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
-import bgDark4 from '../assets/images/BGDark4.png';
-import bgDark1 from '../assets/images/BGDark1.png';
-import heroImg1 from '../assets/images/imageheromarket1.png';
-import heroImg2 from '../assets/images/imageheromarket2.png';
-import heroImg3 from '../assets/images/imageheromarket3.png';
+import bgDark4 from '../assets/images/BGDark4.webp';
+import bgDark1 from '../assets/images/BGDark1.webp';
+import heroImg1 from '../assets/images/imageheromarket1.webp';
+import heroImg2 from '../assets/images/imageheromarket2.webp';
+import heroImg3 from '../assets/images/imageheromarket3.webp';
 
 export default function Markets() {
   const revealRef = useReveal();

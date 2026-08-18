@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
-import bgDark4 from '../assets/images/BGDark4.png';
-import heroImg2 from '../assets/images/imageheromarket2.png';
-import heroImg5 from '../assets/images/imageheromarket5.png';
-import heroImg6 from '../assets/images/imageheromarket6.png';
+import bgDark4 from '../assets/images/BGDark4.webp';
+import heroImg2 from '../assets/images/imageheromarket2.webp';
+import heroImg5 from '../assets/images/imageheromarket5.webp';
+import heroImg6 from '../assets/images/imageheromarket6.webp';
 
 export default function Familias() {
   const revealRef = useReveal();

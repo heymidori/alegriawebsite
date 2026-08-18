@@ -1,17 +1,18 @@
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import { useLang } from './context/LanguageContext';
 import { translations } from './i18n/translations';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Product from './pages/Product';
-import Impact from './pages/Impact';
-import Comunidades from './pages/Comunidades';
-import Familias from './pages/Familias';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+
+const Home = lazy(() => import('./pages/Home'));
+const Product = lazy(() => import('./pages/Product'));
+const Impact = lazy(() => import('./pages/Impact'));
+const Comunidades = lazy(() => import('./pages/Comunidades'));
+const Familias = lazy(() => import('./pages/Familias'));
+const Contact = lazy(() => import('./pages/Contact'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 const SITE_URL = 'https://alegria.finconecta.com';
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
@@ -112,16 +113,18 @@ function Layout() {
       <SEO />
       <Nav />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/producto" element={<Product />} />
-        <Route path="/comunidades" element={<Comunidades />} />
-        <Route path="/familias" element={<Familias />} />
-        <Route path="/mercados" element={<Navigate to="/comunidades" replace />} />
-        <Route path="/nosotros" element={<Impact />} />
-        <Route path="/contacto" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/producto" element={<Product />} />
+          <Route path="/comunidades" element={<Comunidades />} />
+          <Route path="/familias" element={<Familias />} />
+          <Route path="/mercados" element={<Navigate to="/comunidades" replace />} />
+          <Route path="/nosotros" element={<Impact />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </>
   );

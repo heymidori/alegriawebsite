@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import logoHorizontal from '../assets/images/LogoAlegriaHorizontal.png';
+import logoHorizontal from '../assets/images/LogoAlegriaHorizontal.webp';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 

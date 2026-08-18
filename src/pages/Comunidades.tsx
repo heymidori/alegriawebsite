@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { useLang } from "../context/LanguageContext";
 import { translations } from "../i18n/translations";
-import bgDark5 from "../assets/images/BGDark5.png";
-import bgDark4 from "../assets/images/BGDark4.png";
-import heroImg1 from "../assets/images/imageheromarket1.png";
-import heroImg3 from "../assets/images/imageheromarket3.png";
-import heroImg4 from "../assets/images/imageheromarket4.png";
+import bgDark5 from "../assets/images/BGDark5.webp";
+import bgDark4 from "../assets/images/BGDark4.webp";
+import heroImg1 from "../assets/images/imageheromarket1.webp";
+import heroImg3 from "../assets/images/imageheromarket3.webp";
+import heroImg4 from "../assets/images/imageheromarket4.webp";
 
 export default function Comunidades() {
   const revealRef = useReveal();

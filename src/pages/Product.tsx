@@ -1,6 +1,6 @@
 import React from 'react';
-import iconAlegria from '../assets/images/IconAlegria.png';
-import bgDark1 from '../assets/images/BGDark1.png';
+import iconAlegria from '../assets/images/IconAlegria.webp';
+import bgDark1 from '../assets/images/BGDark1.webp';
 import { useReveal } from '../hooks/useReveal';
 import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
