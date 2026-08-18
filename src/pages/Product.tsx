@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import iconAlegria from '../assets/images/IconAlegria.webp';
 import bgDark1 from '../assets/images/BGDark1.webp';
 import { useReveal } from '../hooks/useReveal';
@@ -6,6 +7,7 @@ import { useLang } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
 
 export default function Product() {
+  const navigate = useNavigate();
   const revealRef = useReveal();
   const { lang } = useLang();
   const t = translations[lang].product;
@@ -28,9 +30,8 @@ export default function Product() {
               </h1>
               <p className="hp-sub">{t.heroSub}</p>
               <div className="hp-cta">
-                {/* TODO: add onClick navigation — decide destination (e.g. /contacto) */}
-                <button className="hp-btn-primary">{t.heroCtaPrimary}</button>
-                <button className="hp-btn-secondary">{t.heroCtaSecondary}</button>
+                <button className="hp-btn-primary" onClick={() => navigate('/contacto')}>{t.heroCtaPrimary}</button>
+                <button className="hp-btn-secondary" onClick={() => document.getElementById('cap-heading')?.scrollIntoView({ behavior: 'smooth' })}>{t.heroCtaSecondary}</button>
               </div>
               <p className="hp-trust">{t.heroTrust}</p>
             </div>
@@ -109,24 +110,91 @@ export default function Product() {
               </div>
             </div>
             <div className="privacy-visual" aria-hidden="true">
-              <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 260 280" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                  <linearGradient id="lockGrad" x1="0" y1="0" x2="200" y2="220" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#c595fc" /><stop offset="1" stopColor="#60a5fa" />
+                  <linearGradient id="pvLg1" x1="60" y1="20" x2="200" y2="260" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#c084fc"/><stop offset="1" stopColor="#60a5fa"/>
                   </linearGradient>
+                  <linearGradient id="pvLg2" x1="60" y1="110" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#a855f7"/><stop offset="1" stopColor="#6366f1"/>
+                  </linearGradient>
+                  <linearGradient id="pvShine" x1="80" y1="60" x2="180" y2="130" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="white" stopOpacity="0.18"/><stop offset="1" stopColor="white" stopOpacity="0"/>
+                  </linearGradient>
+                  <radialGradient id="pvGlow" cx="50%" cy="55%" r="45%">
+                    <stop offset="0%" stopColor="#a855f7" stopOpacity="0.4"/>
+                    <stop offset="100%" stopColor="#a855f7" stopOpacity="0"/>
+                  </radialGradient>
+                  <filter id="pvBlur">
+                    <feGaussianBlur stdDeviation="18"/>
+                  </filter>
+                  <filter id="pvGlowF">
+                    <feGaussianBlur stdDeviation="5" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
                 </defs>
-                <circle cx="100" cy="120" r="88" fill="rgba(197,149,252,0.07)" stroke="rgba(197,149,252,0.14)" strokeWidth="1" />
-                <circle cx="100" cy="120" r="65" fill="rgba(197,149,252,0.05)" stroke="rgba(197,149,252,0.1)" strokeWidth="1" />
-                <path d="M66 97 L66 68 A34 34 0 0 1 134 68 L134 97" stroke="url(#lockGrad)" strokeWidth="9" strokeLinecap="round" fill="none" />
-                <rect x="36" y="94" width="128" height="98" rx="20" fill="url(#lockGrad)" />
-                <circle cx="100" cy="136" r="15" fill="rgba(255,255,255,0.22)" />
-                <rect x="93.5" y="136" width="13" height="20" rx="6.5" fill="rgba(255,255,255,0.22)" />
-                <path d="M84 136 L95 147 L118 121" stroke="white" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="38" cy="42" r="5" fill="rgba(197,149,252,0.35)" />
-                <circle cx="162" cy="28" r="3.5" fill="rgba(96,165,250,0.35)" />
-                <circle cx="18" cy="148" r="4" fill="rgba(197,149,252,0.25)" />
-                <circle cx="178" cy="162" r="6" fill="rgba(96,165,250,0.22)" />
-                <circle cx="155" cy="55" r="2.5" fill="rgba(197,149,252,0.3)" />
+
+                {/* Ambient glow */}
+                <ellipse cx="130" cy="155" rx="90" ry="85" fill="url(#pvGlow)" filter="url(#pvBlur)"/>
+
+                {/* Outer dashed orbit */}
+                <circle cx="130" cy="148" r="108" stroke="rgba(197,149,252,0.1)" strokeWidth="1" strokeDasharray="3 9" fill="none"/>
+                {/* Inner ring */}
+                <circle cx="130" cy="148" r="80" stroke="rgba(197,149,252,0.08)" strokeWidth="1" fill="none"/>
+
+                {/* Shield shape */}
+                <path d="M130 34 L205 70 L205 148 C205 194 168 222 130 238 C92 222 55 194 55 148 L55 70 Z"
+                      fill="rgba(88,40,160,0.28)" stroke="url(#pvLg1)" strokeWidth="1.5"/>
+                {/* Shield top gloss */}
+                <path d="M130 42 L197 75 L197 112 C173 107 152 105 130 105 C108 105 87 107 63 112 L63 75 Z"
+                      fill="url(#pvShine)"/>
+
+                {/* Lock shackle */}
+                <path d="M101 128 L101 104 A29 29 0 0 1 159 104 L159 128"
+                      stroke="url(#pvLg1)" strokeWidth="8" strokeLinecap="round" fill="none" filter="url(#pvGlowF)"/>
+
+                {/* Lock body */}
+                <rect x="78" y="124" width="104" height="80" rx="16" fill="url(#pvLg2)"/>
+                {/* Body top highlight */}
+                <rect x="78" y="124" width="104" height="36" rx="16" fill="rgba(255,255,255,0.1)"/>
+                {/* Body bottom shadow */}
+                <rect x="78" y="172" width="104" height="32" rx="0" fill="rgba(0,0,0,0.08)"/>
+                <rect x="78" y="172" width="104" height="32" rx="16" fill="rgba(0,0,0,0)"/>
+
+                {/* Keyhole circle */}
+                <circle cx="130" cy="157" r="12" fill="rgba(255,255,255,0.18)"/>
+                {/* Keyhole slot */}
+                <rect x="125.5" y="157" width="9" height="16" rx="4.5" fill="rgba(255,255,255,0.18)"/>
+
+                {/* Checkmark */}
+                <path d="M116 157 L126 167 L146 144" stroke="white" strokeWidth="4.5"
+                      strokeLinecap="round" strokeLinejoin="round"/>
+
+                {/* Network nodes — top left cluster */}
+                <circle cx="28" cy="88" r="4.5" fill="rgba(192,132,252,0.55)"/>
+                <circle cx="44" cy="62" r="3" fill="rgba(192,132,252,0.38)"/>
+                <line x1="31" y1="86" x2="41" y2="65" stroke="rgba(192,132,252,0.22)" strokeWidth="1"/>
+                <line x1="32" y1="88" x2="55" y2="100" stroke="rgba(192,132,252,0.18)" strokeWidth="1"/>
+
+                {/* Network nodes — top right */}
+                <circle cx="218" cy="72" r="5" fill="rgba(96,165,250,0.5)"/>
+                <circle cx="238" cy="96" r="3" fill="rgba(96,165,250,0.35)"/>
+                <line x1="213" y1="72" x2="205" y2="82" stroke="rgba(96,165,250,0.2)" strokeWidth="1"/>
+                <line x1="220" y1="75" x2="235" y2="93" stroke="rgba(96,165,250,0.18)" strokeWidth="1"/>
+
+                {/* Network nodes — bottom left */}
+                <circle cx="20" cy="196" r="3.5" fill="rgba(192,132,252,0.4)"/>
+                <line x1="23" y1="194" x2="55" y2="180" stroke="rgba(192,132,252,0.15)" strokeWidth="1"/>
+
+                {/* Network nodes — bottom right */}
+                <circle cx="240" cy="200" r="4.5" fill="rgba(96,165,250,0.4)"/>
+                <circle cx="224" cy="230" r="2.5" fill="rgba(96,165,250,0.3)"/>
+                <line x1="236" y1="200" x2="205" y2="190" stroke="rgba(96,165,250,0.15)" strokeWidth="1"/>
+                <line x1="238" y1="204" x2="226" y2="227" stroke="rgba(96,165,250,0.15)" strokeWidth="1"/>
+
+                {/* Tiny accent dots */}
+                <circle cx="170" cy="30" r="2" fill="rgba(192,132,252,0.45)"/>
+                <circle cx="86" cy="24" r="1.5" fill="rgba(96,165,250,0.4)"/>
               </svg>
             </div>
           </div>

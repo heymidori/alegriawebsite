@@ -23,24 +23,24 @@ const pageMeta: Record<string, { es: { title: string; desc: string }; en: { titl
     en: { title: 'Alegría — AI Companion for Older Adults', desc: 'Alegría is an AI companion for older adults, elderly people with cognitive decline, and adults with disabilities. By phone or app, a friend who is present every day.' },
   },
   '/producto': {
-    es: { title: 'Producto — Alegría', desc: 'Una voz que te conoce, te acompaña y te da estructura — sin pantallas ni complicaciones. Alegría es paciente, cálida y siempre disponible.' },
-    en: { title: 'Product — Alegría', desc: 'A voice that knows you, keeps you company, and gives you structure — no screens, no complications. Alegría is patient, warm, and always available.' },
+    es: { title: 'Cómo funciona Alegría — IA por voz para mayores', desc: 'Conversación natural, recordatorios de medicación, check-ins diarios y resúmenes para cuidadores — sin pantallas, sin apps. Privacidad desde el diseño.' },
+    en: { title: 'How Alegría Works — Voice AI for Older Adults', desc: 'Natural conversation, medication reminders, daily check-ins and caregiver summaries — no screens, no apps required. Privacy by design.' },
   },
   '/comunidades': {
-    es: { title: 'Comunidades — Alegría', desc: 'Alegría se integra en tu flujo de trabajo de cuidado existente — tu equipo lo configura, tus residentes lo usan, y tu organización obtiene visibilidad real.' },
-    en: { title: 'Communities — Alegría', desc: "Alegría fits into your existing care workflow — your staff configures it, your residents use it, and your organization gets real visibility." },
+    es: { title: 'Alegría para Comunidades y Residencias de Cuidado', desc: 'Alegría se integra en el flujo de trabajo de cuidado — tu equipo lo configura, tus residentes lo usan, tu organización obtiene visibilidad real sobre bienestar y engagement.' },
+    en: { title: 'Alegría for Senior Living Communities', desc: 'Alegría fits into your existing care workflow — your staff configures it, your residents use it, and your organization gets real visibility into wellbeing and engagement.' },
   },
   '/familias': {
-    es: { title: 'Familias — Alegría', desc: 'Configuras el compañero en minutos — su historia, sus personas, sus rutinas — y Alegría se encarga del resto.' },
-    en: { title: 'Families — Alegría', desc: 'You set up the companion in minutes — their stories, their people, their routines — and Alegría handles the rest.' },
+    es: { title: 'Alegría para Familias — Compañía diaria para tus seres queridos', desc: 'Configura el compañero de IA en minutos: sus temas favoritos, sus rutinas, sus personas. Alegría cuida a tu familiar cuando tú no puedes estar presente.' },
+    en: { title: 'Alegría for Families — Daily AI Companion for Loved Ones', desc: 'Set up the AI companion in minutes — their favorite topics, routines, and people. Alegría keeps your loved one company when you cannot be there.' },
   },
   '/nosotros': {
-    es: { title: 'Nosotros — Alegría', desc: 'Alegría fue construida con la convicción de que cada persona mayor merece compañía constante y cálida, sin importar dónde vivan o quién las cuide.' },
-    en: { title: 'About — Alegría', desc: 'Alegría was built on the belief that every older adult deserves consistent, warm companionship, regardless of where they live or who cares for them.' },
+    es: { title: 'Sobre Alegría — IA construida para la dignidad y el cuidado', desc: 'Alegría fue construida con la convicción de que cada persona mayor merece compañía constante y cálida, sin importar dónde vivan o quién las cuide.' },
+    en: { title: 'About Alegría — AI Built for Dignity and Care', desc: 'Alegría was built on the belief that every older adult deserves consistent, warm companionship, regardless of where they live or who cares for them.' },
   },
   '/contacto': {
-    es: { title: 'Contacto — Alegría', desc: 'Cuéntanos sobre tu comunidad, tu familia o tu proyecto. Te respondemos en menos de 24 horas.' },
-    en: { title: 'Contact — Alegría', desc: 'Tell us about your community, your family, or your project. We reply within 24 hours.' },
+    es: { title: 'Contacto — Habla con el equipo de Alegría', desc: 'Cuéntanos sobre tu comunidad, tu familia o tu proyecto. Respondemos en menos de 24 horas.' },
+    en: { title: 'Contact — Talk to the Alegría Team', desc: 'Tell us about your community, your family, or your project. We reply within 24 hours.' },
   },
 };
 
