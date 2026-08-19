@@ -5,6 +5,9 @@
     <link rel="icon" type="image/png" href="/src/assets/images/faviconalegria.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- LCP: preload the home hero image so it's discoverable before React/JS run -->
+    <link rel="preload" as="image" href="/src/assets/images/BGHomeHero.webp" fetchpriority="high" />
+
     <!-- Fonts: preconnect first, then async load -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

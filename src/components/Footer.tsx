@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-top">
           <div className="footer-brand">
-            <img src={logoVerticalWhite} alt="Alegría AI" className="footer-logo" />
+            <img src={logoVerticalWhite} alt="Alegría AI" className="footer-logo" width={83} height={72} />
             <p>{t.brandDesc}</p>
           </div>
 
