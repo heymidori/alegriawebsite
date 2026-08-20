@@ -19,7 +19,7 @@ export default function Nav() {
         onClick={() => { navigate('/'); closeMenu(); }}
         aria-label={t.goHome}
       >
-        <img src={logoHorizontal} alt="Alegría AI" className="nav-logo-img" />
+        <img src={logoHorizontal} alt="Alegría AI" className="nav-logo-img" width={121} height={36} />
       </button>
 
       <ul className={`nav-links${menuOpen ? ' open' : ''}`} id="navLinks" role="menubar">

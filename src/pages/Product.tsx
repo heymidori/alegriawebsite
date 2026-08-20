@@ -23,17 +23,17 @@ export default function Product() {
 
             {/* LEFT — text */}
             <div className="hp-left">
-              <div className="hp-badge">{t.heroBadge}</div>
+              <div className="hp-badge hero-anim hero-anim-1">{t.heroBadge}</div>
               <h1 id="product-hero-heading">
                 {t.heroH1a}<br />
                 <span className="accent">{t.heroH1b}</span>
               </h1>
-              <p className="hp-sub">{t.heroSub}</p>
-              <div className="hp-cta">
+              <p className="hp-sub hero-anim hero-anim-2">{t.heroSub}</p>
+              <div className="hp-cta hero-anim hero-anim-3">
                 <button className="hp-btn-primary" onClick={() => navigate('/contacto')}>{t.heroCtaPrimary}</button>
                 <button className="hp-btn-secondary" onClick={() => document.getElementById('cap-heading')?.scrollIntoView({ behavior: 'smooth' })}>{t.heroCtaSecondary}</button>
               </div>
-              <p className="hp-trust">{t.heroTrust}</p>
+              <p className="hp-trust hero-anim hero-anim-4">{t.heroTrust}</p>
             </div>
 
             {/* RIGHT — conversation mockup */}

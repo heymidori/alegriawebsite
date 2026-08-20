@@ -30,14 +30,17 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-heading">
         {/* ── Text content ── */}
         <div className="hero-text">
-          <div className="hero-badge">{t.heroBadge}</div>
+          <div className="hero-badge hero-anim hero-anim-1">
+            <span className="hero-badge-full">{t.heroBadge}</span>
+            <span className="hero-badge-short">{t.heroBadgeShort}</span>
+          </div>
           <h1 id="hero-heading">
             {t.heroH1a}
             <br />
             <span className="accent">{t.heroH1b}</span>
           </h1>
-          <p className="hero-sub">{t.heroSub}</p>
-          <div className="hero-btns">
+          <p className="hero-sub hero-anim hero-anim-2">{t.heroSub}</p>
+          <div className="hero-btns hero-anim hero-anim-3">
             <button
               className="btn-primary"
               onClick={() => navigate("/comunidades")}
@@ -88,7 +91,7 @@ export default function Home() {
           </div>
 
           {/* Phone image */}
-          <img src={alegriaPhone} className="hero-phone-img" alt="" fetchPriority="high" />
+          <img src={alegriaPhone} className="hero-phone-img" alt="" fetchPriority="high" width={545} height={1100} />
 
           {/* Bubble 3 — bottom left: reply */}
           <div className="hero-bubble hero-bubble--3">
@@ -107,12 +110,17 @@ export default function Home() {
         style={{ backgroundImage: `url(${bgDark1})` }}
       >
         <div className="container">
-          <div className="section-label">{t.problemLabel}</div>
-          <h2 id="problem-heading">{t.problemH2}</h2>
-          <p className="section-intro">{t.problemIntro}</p>
+          <div className="section-label reveal">{t.problemLabel}</div>
+          <h2 id="problem-heading" className="reveal">{t.problemH2}</h2>
+          <p className="section-intro reveal">{t.problemIntro}</p>
           <div className="problem-grid" role="list">
-            {t.problems.map(({ icon, title, desc }) => (
-              <div className="problem-card reveal" role="listitem" key={title}>
+            {t.problems.map(({ icon, title, desc }, i) => (
+              <div
+                className="problem-card reveal"
+                role="listitem"
+                key={title}
+                style={{ transitionDelay: `${i * 90}ms` }}
+              >
                 <div className="problem-icon" aria-hidden="true">
                   {icon}
                 </div>
@@ -121,7 +129,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p className="problem-closing">{t.problemClosing}</p>
+          <p className="problem-closing reveal">{t.problemClosing}</p>
         </div>
       </section>
 
@@ -135,12 +143,12 @@ export default function Home() {
         <div className="serve-deco serve-deco--right" aria-hidden="true" />
         <div className="container">
           <div className="serve-header">
-            <div className="section-label">{t.serveLabel}</div>
-            <h2 id="serve-heading">
+            <div className="section-label reveal">{t.serveLabel}</div>
+            <h2 id="serve-heading" className="reveal">
               {t.serveH2a}<br />
               <span className="accent">{t.serveH2b}</span>
             </h2>
-            <p className="section-intro">{t.serveIntro}</p>
+            <p className="section-intro reveal">{t.serveIntro}</p>
           </div>
           <div className="serve-grid" role="list">
             {[
@@ -159,11 +167,12 @@ export default function Home() {
                 alt: t.serveCards[2].title,
                 ...t.serveCards[2],
               },
-            ].map(({ img, alt, title, desc }) => (
+            ].map(({ img, alt, title, desc }, i) => (
               <article
                 className="serve-card reveal"
                 role="listitem"
                 key={title}
+                style={{ transitionDelay: `${i * 90}ms` }}
               >
                 <div className="serve-card-img-wrap">
                   <img src={img} alt={alt} className="serve-card-img" loading="lazy" />
@@ -193,11 +202,11 @@ export default function Home() {
         <div className="ba-glow ba-glow--left" aria-hidden="true" />
         <div className="ba-glow ba-glow--right" aria-hidden="true" />
         <div className="container">
-          <div className="ba-header-area">
+          <div className="ba-header-area reveal">
             <div className="section-label">{t.baLabel}</div>
             <h2 id="ba-heading">{t.baH2}</h2>
           </div>
-          <div className="ba-legend" aria-hidden="true">
+          <div className="ba-legend reveal" aria-hidden="true">
             <span className="ba-legend-pill ba-legend-pill--before">
               {t.baBeforeHeader}
             </span>
@@ -207,7 +216,12 @@ export default function Home() {
           </div>
           <div className="ba-pairs" role="table" aria-label={t.baTableAria}>
             {t.baBefore.map((beforeItem, i) => (
-              <div className="ba-pair reveal" role="row" key={beforeItem}>
+              <div
+                className="ba-pair reveal"
+                role="row"
+                key={beforeItem}
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
                 <div className="ba-pill ba-pill--before" role="cell">
                   {beforeItem}
                 </div>
@@ -227,7 +241,7 @@ export default function Home() {
       <section aria-labelledby="what-heading">
         <div className="container">
           <div className="what-grid">
-            <div className="what-visual" aria-hidden="true">
+            <div className="what-visual reveal" aria-hidden="true">
               <img
                 src={grandma2}
                 alt=""
@@ -241,12 +255,17 @@ export default function Home() {
               />
             </div>
             <div>
-              <div className="section-label">{t.whatLabel}</div>
-              <h2 id="what-heading">{t.whatH2}</h2>
-              <p className="section-intro">{t.whatIntro}</p>
+              <div className="section-label reveal">{t.whatLabel}</div>
+              <h2 id="what-heading" className="reveal">{t.whatH2}</h2>
+              <p className="section-intro reveal">{t.whatIntro}</p>
               <div className="what-features" role="list">
-                {t.features.map(({ icon, title, desc }) => (
-                  <div className="feature-item" role="listitem" key={title}>
+                {t.features.map(({ icon, title, desc }, i) => (
+                  <div
+                    className="feature-item reveal"
+                    role="listitem"
+                    key={title}
+                    style={{ transitionDelay: `${i * 80}ms` }}
+                  >
                     <div className="feature-icon" aria-hidden="true">
                       {icon}
                     </div>
@@ -272,7 +291,7 @@ export default function Home() {
             {/* LEFT — text content */}
             <div className="flex-text-col">
               <div className="section-label reveal">{t.flexLabel}</div>
-              <h2 id="flex-heading" className="flex-h2 reveal">
+              <h2 id="flex-heading" className="flex-h2 reveal" style={{ transitionDelay: "70ms" }}>
                 <span className="flex-h2-plain">
                   {t.flexH2.slice(0, t.flexH2.indexOf(". ") + 1)}
                 </span>
@@ -280,21 +299,27 @@ export default function Home() {
                   {t.flexH2.slice(t.flexH2.indexOf(". ") + 1)}
                 </span>
               </h2>
-              <p className="flex-desc reveal">{t.flexDesc}</p>
-              <p className="flex-closing reveal">{t.flexClosing}</p>
+              <p className="flex-desc reveal" style={{ transitionDelay: "140ms" }}>{t.flexDesc}</p>
+              <p className="flex-closing reveal" style={{ transitionDelay: "210ms" }}>{t.flexClosing}</p>
             </div>
 
             {/* RIGHT — mockup + floating cards */}
-            <div className="flex-mockup-wrap" aria-hidden="true">
+            <div className="flex-mockup-wrap reveal" aria-hidden="true">
               <img src={PhoneMockup} alt="" className="flex-mockup-img" loading="lazy" />
-              <div className="flex-float-card flex-float-card--phone">
+              <div
+                className="flex-float-card flex-float-card--phone reveal"
+                style={{ transitionDelay: "120ms" }}
+              >
                 <span className="flex-float-emoji">{t.flexCards[0].icon}</span>
                 <div>
                   <p className="flex-float-title">{t.flexCards[0].title}</p>
                   <p className="flex-float-tag">{t.flexCards[0].tag}</p>
                 </div>
               </div>
-              <div className="flex-float-card flex-float-card--app">
+              <div
+                className="flex-float-card flex-float-card--app reveal"
+                style={{ transitionDelay: "220ms" }}
+              >
                 <span className="flex-float-emoji">{t.flexCards[1].icon}</span>
                 <div>
                   <p className="flex-float-title">{t.flexCards[1].title}</p>
@@ -317,6 +342,7 @@ export default function Home() {
       >
         <div className="container">
           <h2
+            className="reveal"
             style={{
               color: "white",
               fontSize: "clamp(1.6rem,3vw,2.4rem)",
@@ -326,21 +352,24 @@ export default function Home() {
             {t.ctaH2}
           </h2>
           <p
+            className="reveal"
             style={{
               color: "rgba(255,255,255,0.85)",
               marginBottom: "2rem",
               fontSize: "1.05rem",
+              transitionDelay: "80ms",
             }}
           >
             {t.ctaP}
           </p>
           <button
-            className="btn-secondary"
+            className="btn-secondary reveal"
             onClick={() => navigate("/mercados")}
             style={{
               background: "white",
               color: "var(--purple-mid)",
               borderColor: "white",
+              transitionDelay: "160ms",
             }}
           >
             {t.ctaBtn}

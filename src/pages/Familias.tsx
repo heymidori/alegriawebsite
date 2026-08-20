@@ -19,13 +19,20 @@ export default function Familias() {
       {/* HERO */}
       <section className="hero hero-markets" aria-labelledby="familias-hero-heading">
         <div className="hero-text">
-          <div className="hero-badge">{t.heroBadge}</div>
+          <div className="hero-badge hero-anim hero-anim-1">{t.heroBadge}</div>
           <h1 id="familias-hero-heading">
             {t.heroH1a}<br />
             <span className="accent">{t.heroH1b}</span>
           </h1>
-          <p className="hero-sub">{t.heroSub}</p>
-          <Link to="/contacto" className="btn-primary" aria-label={t.heroCta}>
+          <p className="hero-sub hero-anim hero-anim-2">{t.heroSub}</p>
+          <div className="hero-pills hero-anim hero-anim-3">
+            {t.heroPills.map(({ icon, label }) => (
+              <span className="hero-pill" key={label}>
+                <span aria-hidden="true">{icon}</span> {label}
+              </span>
+            ))}
+          </div>
+          <Link to="/contacto" className="btn-primary hero-anim hero-anim-4" aria-label={t.heroCta}>
             {t.heroCta}
           </Link>
         </div>

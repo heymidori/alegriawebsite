@@ -103,7 +103,7 @@ export default function Contact() {
               <p>{t.successSub}</p>
             </div>
           ) : (
-            <form className="ct-form reveal" onSubmit={handleSubmit} noValidate>
+            <form className="ct-form reveal" onSubmit={handleSubmit}>
               <div className="ct-form-row">
                 <div className="ct-field">
                   <label htmlFor="ct-name">{t.fieldName}</label>

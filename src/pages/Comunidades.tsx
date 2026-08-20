@@ -27,16 +27,23 @@ export default function Comunidades() {
         aria-labelledby="comunidades-hero-heading"
       >
         <div className="hero-text">
-          <div className="hero-badge">{t.heroBadge}</div>
+          <div className="hero-badge hero-anim hero-anim-1">{t.heroBadge}</div>
           <h1 id="comunidades-hero-heading">
             {t.heroH1a}
             <br />
             <span className="accent">{t.heroH1b}</span>
           </h1>
-          <p className="hero-sub">{t.heroSub}</p>
+          <p className="hero-sub hero-anim hero-anim-2">{t.heroSub}</p>
+          <div className="hero-pills hero-anim hero-anim-3">
+            {t.heroPills.map(({ icon, label }) => (
+              <span className="hero-pill" key={label}>
+                <span aria-hidden="true">{icon}</span> {label}
+              </span>
+            ))}
+          </div>
           <Link
             to="/contacto"
-            className="btn-primary"
+            className="btn-primary hero-anim hero-anim-4"
             aria-label={t.heroCta}
           >
             {t.heroCta}

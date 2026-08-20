@@ -20,6 +20,7 @@ export const translations = {
     },
     home: {
       heroBadge: 'Construido junto a cuidadores, implementado en comunidades reales',
+      heroBadgeShort: 'Construido junto a cuidadores',
       heroH1a: 'Toda persona merece a alguien ',
       heroH1b: 'que recuerde su historia.',
       heroSub: 'Alegría es un compañero de IA para adultos mayores, personas mayores con deterioro cognitivo y adultos con discapacidades. Por teléfono o mediante una aplicación, según lo que mejor le quede, Alegría se convierte en un amigo presente cada día.',
@@ -377,6 +378,11 @@ export const translations = {
       heroH1b: 'Visibilidad para cada cuidador.',
       heroSub: 'Alegría se integra en tu flujo de trabajo de cuidado existente — tu equipo lo configura, tus residentes lo usan, y tu organización obtiene visibilidad real.',
       heroCta: 'Agendar demo para mi comunidad →',
+      heroPills: [
+        { icon: '🏠', label: 'Residencias' },
+        { icon: '🏡', label: 'Home Care' },
+        { icon: '🤝', label: 'Apoyo Especializado' },
+      ],
       orgsLabel: 'TIPOS DE ORGANIZACIÓN',
       orgsH2: '¿Para qué tipo de comunidad?',
       orgs: [
@@ -412,6 +418,11 @@ export const translations = {
       heroH1b: 'viva donde viva.',
       heroSub: 'Configuras el compañero en minutos — su historia, sus personas, sus rutinas — y Alegría se encarga del resto.',
       heroCta: 'Configurar para mi familiar →',
+      heroPills: [
+        { icon: '🏠', label: 'Vive solo' },
+        { icon: '🏥', label: 'En cuidado' },
+        { icon: '🤝', label: 'Apoyo Especializado' },
+      ],
       scenariosLabel: '¿TE SUENA FAMILIAR?',
       scenariosH2: 'Alegría es para tu familia si...',
       scenarios: [
@@ -462,6 +473,7 @@ export const translations = {
     },
     home: {
       heroBadge: 'Built alongside caregivers, deployed in real communities',
+      heroBadgeShort: 'Built alongside caregivers',
       heroH1a: 'Every person deserves someone ',
       heroH1b: 'who remembers their story.',
       heroSub: 'Alegría is an AI companion for adults and elderly people with cognitive decline. Either by phone or through an app, Alegría becomes a friend who is present every day.',
@@ -808,6 +820,11 @@ export const translations = {
       heroH1b: 'Visibility for every caregiver.',
       heroSub: 'Alegría fits into your existing care workflow — your staff configures it, your residents use it, and your organization gets real visibility.',
       heroCta: 'Schedule a demo for my community →',
+      heroPills: [
+        { icon: '🏠', label: 'Senior Living' },
+        { icon: '🏡', label: 'Home Care' },
+        { icon: '🤝', label: 'Specialized Care' },
+      ],
       orgsLabel: 'ORGANIZATION TYPES',
       orgsH2: 'What type of community are you?',
       orgs: [
@@ -843,6 +860,11 @@ export const translations = {
       heroH1b: 'wherever they live.',
       heroSub: 'You set up the companion in minutes — their stories, their people, their routines — and Alegría handles the rest.',
       heroCta: 'Set up for my loved one →',
+      heroPills: [
+        { icon: '🏠', label: 'Lives alone' },
+        { icon: '🏥', label: 'In care' },
+        { icon: '🤝', label: 'Specialized Care' },
+      ],
       scenariosLabel: 'DOES THIS SOUND FAMILIAR?',
       scenariosH2: 'Alegría is for your family if...',
       scenarios: [

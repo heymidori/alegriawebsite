@@ -30,14 +30,14 @@ export default function Impact() {
         />
         <div className="nos-hero-inner">
           <div className="nos-hero-text">
-            <div className="hero-badge">{t.heroBadge}</div>
+            <div className="hero-badge hero-anim hero-anim-1">{t.heroBadge}</div>
             <h1 id="nos-hero-heading">
               {t.heroH1a}
               <br />
               <span className="accent">{t.heroH1b}</span>
             </h1>
-            <p className="hero-sub">{t.heroSub}</p>
-            <div className="nos-hero-pills">
+            <p className="hero-sub hero-anim hero-anim-2">{t.heroSub}</p>
+            <div className="nos-hero-pills hero-anim hero-anim-3">
               {t.heroPills.map(({ icon, label }) => (
                 <span className="nos-hero-pill" key={label}>
                   <span aria-hidden="true">{icon}</span> {label}
